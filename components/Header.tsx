@@ -1,23 +1,19 @@
 'use client';
 
 import { AnimatePresence } from 'framer-motion';
-import { useState, useCallback } from 'react';
 import Nav from './Nav';
 import { cn } from '@/lib/utils';
+import { useNav } from '@/providers/NavContext';
 
 const Header = () => {
-  const [navActive, setNavActive] = useState<boolean>(false);
-
-  const toggleNav = useCallback(() => {
-    setNavActive((prev) => !prev);
-  }, []);
+  const { navActive, toggleHandler } = useNav();
 
   return (
     <header className="absolute inset-x-0 top-[40px] z-[60]">
       <div className="container mx-auto">
         <div className="flex items-center justify-end">
           <button
-            onClick={toggleNav}
+            onClick={toggleHandler}
             className="relative z-[60] flex h-6 w-8 items-center justify-center text-accent outline-none"
           >
             <span

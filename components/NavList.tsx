@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { NAV_LINKS } from '@/constant';
 import { motion } from 'framer-motion';
+import { useNav } from '@/providers/NavContext';
 
 const letterAnim = {
   initial: {
@@ -41,6 +42,7 @@ const getLetter = (name: string) => {
 };
 
 const Nav = () => {
+  const { toggleHandler } = useNav();
   return (
     <ul className="flex flex-col items-center gap-8 font-primary text-4xl font-semibold uppercase text-accent">
       {NAV_LINKS.map((link, index) => (
@@ -49,6 +51,7 @@ const Nav = () => {
             href={link.href}
             key={index}
             className="flex items-baseline overflow-hidden transition-all xl:hover:text-white"
+            onClick={toggleHandler}
           >
             {getLetter(link.name)}
           </Link>

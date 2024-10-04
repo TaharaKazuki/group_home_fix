@@ -3,6 +3,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import FadeAnimation from '@/components/FadeAnimation';
 import RollUpAnimation from '@/components/RollupAnimation';
+import { NavProvider } from '@/providers/NavContext';
 
 export const metadata: Metadata = {
   title: 'IXIA Group Home',
@@ -17,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="ja" className="h-screen">
       <body className={`antialiased`}>
-        <RollUpAnimation />
-        <Header />
-        <FadeAnimation>{children}</FadeAnimation>
+        <NavProvider>
+          <RollUpAnimation />
+          <Header />
+          <FadeAnimation>{children}</FadeAnimation>
+        </NavProvider>
       </body>
     </html>
   );
