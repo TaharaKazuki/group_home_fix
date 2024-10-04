@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
 import FadeAnimation from '@/components/FadeAnimation';
-import RollUpAnimation from '@/components/RollupAnimation';
 import { NavProvider } from '@/providers/NavContext';
 
 export const metadata: Metadata = {
@@ -20,7 +19,6 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <NavProvider>
           <Header />
-          <RollUpAnimation />
           <FadeAnimation>{children}</FadeAnimation>
         </NavProvider>
       </body>
