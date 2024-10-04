@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import Nav from './Nav';
 import { cn } from '@/lib/utils';
 import { useNav } from '@/providers/NavContext';
+import { Button } from './ui/button';
 
 const Header = () => {
   const { navActive, toggleHandler } = useNav();
@@ -11,7 +12,14 @@ const Header = () => {
   return (
     <header className="fixed inset-x-0 top-[40px] z-[60]">
       <div className="container mx-auto">
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-end gap-4">
+          <Button
+            variant={'default'}
+            size={'lg'}
+            className="rounded-full bg-yellow-300"
+          >
+            お問い合わせはコチラ
+          </Button>
           <button
             onClick={toggleHandler}
             className="relative z-[60] flex h-6 w-8 items-center justify-center text-accent outline-none"
