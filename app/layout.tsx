@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
+import FadeAnimation from '@/components/FadeAnimation';
+import RollUpAnimation from '@/components/RollupAnimation';
 
 export const metadata: Metadata = {
   title: 'IXIA Group Home',
@@ -15,8 +17,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={`antialiased`}>
+        <RollUpAnimation />
         <Header />
-        {children}
+        <FadeAnimation>{children}</FadeAnimation>
       </body>
     </html>
   );
