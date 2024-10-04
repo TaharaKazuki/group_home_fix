@@ -22,14 +22,14 @@ const Footer = () => {
           </li>
         </ul>
         {/* links */}
-        <ul className="flex flex-row gap-9 py-16">
+        <ul className="flex lg:flex-row flex-col text-center lg:gap-9 gap-3 lg:py-16 py-12">
           {LINKS.map((link, i) => (
             <li key={i}>
               <span className="text-xs">{link.name}</span>
             </li>
           ))}
         </ul>
-        <p className="text-xs">© 2024 IXIA group home</p>
+        <p className="lg:text-[10px] text-[2vw]">© 2024 IXIA group home</p>
       </div>
     </footer>
   );

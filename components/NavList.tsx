@@ -50,7 +50,7 @@ const Nav = () => {
           <Link
             href={link.href}
             key={index}
-            className="flex items-baseline overflow-hidden transition-all xl:hover:text-white"
+            className="flex items-baseline overflow-hidden transition-all xl:hover:text-white text-sm lg:text-base"
             onClick={toggleHandler}
           >
             {getLetter(link.name)}

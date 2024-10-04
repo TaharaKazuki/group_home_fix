@@ -10,13 +10,13 @@ const Header = () => {
   const { navActive, toggleHandler } = useNav();
 
   return (
-    <header className="fixed inset-x-0 top-[40px] z-[60]">
+    <header className="fixed inset-x-0 top-[20px] lg:top-[40px] z-[60]">
       <div className="container mx-auto">
         <div className="flex items-center justify-end gap-4">
           <Button
             variant={'default'}
             size={'lg'}
-            className="rounded-full bg-yellow-300"
+            className="rounded-full bg-yellow-300 hidden lg:block"
           >
             お問い合わせはコチラ
           </Button>
