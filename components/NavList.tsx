@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { NAV_LINKS } from '@/constant';
+import { LINKS } from '@/constant';
 import { motion } from 'framer-motion';
 import { useNav } from '@/providers/NavContext';
 
@@ -45,7 +45,7 @@ const Nav = () => {
   const { toggleHandler } = useNav();
   return (
     <ul className="flex flex-col items-center gap-8 font-primary text-4xl font-semibold uppercase text-accent">
-      {NAV_LINKS.map((link, index) => (
+      {LINKS.map((link, index) => (
         <li key={index} className="flex flex-row">
           <Link
             href={link.href}

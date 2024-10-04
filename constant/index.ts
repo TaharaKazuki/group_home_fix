@@ -1,4 +1,4 @@
-export const NAV_LINKS = [
+export const LINKS = [
   { href: '/', name: 'ホーム' },
   { href: '/about', name: '私たちについて' },
   { href: '/schedule', name: 'スケジュール' },

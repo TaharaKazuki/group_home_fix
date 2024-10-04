@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import FadeAnimation from '@/components/FadeAnimation';
 import { NavProvider } from '@/providers/NavContext';
 
@@ -20,6 +21,7 @@ export default function RootLayout({
         <NavProvider>
           <Header />
           <FadeAnimation>{children}</FadeAnimation>
+          <Footer />
         </NavProvider>
       </body>
     </html>
