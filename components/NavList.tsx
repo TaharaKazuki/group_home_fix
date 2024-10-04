@@ -51,7 +51,6 @@ const Nav = () => {
             className="flex items-baseline overflow-hidden transition-all xl:hover:text-white"
           >
             {getLetter(link.name)}
-            <span className="ml-3 text-xs">{getLetter(link.subText)}</span>
           </Link>
         </li>
       ))}
