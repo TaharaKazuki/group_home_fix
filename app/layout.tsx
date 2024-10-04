@@ -19,8 +19,8 @@ export default function RootLayout({
     <html lang="ja" className="h-screen">
       <body className={`antialiased`}>
         <NavProvider>
-          <RollUpAnimation />
           <Header />
+          <RollUpAnimation />
           <FadeAnimation>{children}</FadeAnimation>
         </NavProvider>
       </body>

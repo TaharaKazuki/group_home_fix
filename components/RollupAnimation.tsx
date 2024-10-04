@@ -30,7 +30,7 @@ const RollUpAnimation = () => {
               transition={{
                 duration: 0.6,
                 ease: 'easeInOut',
-                delay: 0.2,
+                delay: 0.6,
               }}
               className="relative size-full bg-red-600"
             />
