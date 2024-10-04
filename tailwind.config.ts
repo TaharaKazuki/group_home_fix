@@ -12,6 +12,12 @@ const config: Config = {
       center: true,
       padding: '15px',
     },
+    screens: {
+      sm: '640px',
+      md: '778px',
+      lg: '960px',
+      xl: '1430px',
+    },
     extend: {},
   },
   // plugins: [require('tailwindcss-animate')],

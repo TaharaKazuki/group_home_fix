@@ -1,5 +1,5 @@
 'use client';
 
 export default function Home() {
-  return <div>aaaa</div>;
+  return <div className="h-full overflow-hidden">aaaa</div>;
 }

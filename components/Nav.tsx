@@ -1,24 +1,34 @@
-'use client';
+import { motion } from 'framer-motion';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { NAV_LINKS } from '@/constant';
+import NavList from './NavList';
+
+const heightAnimation = {
+  initial: {
+    height: 0,
+  },
+  open: {
+    height: '85vh',
+    transition: { duration: 1, ease: [0.75, 0, 0.23, 1] },
+  },
+  close: {
+    height: 0,
+    transition: { duration: 1, ease: [0.75, 0, 0.23, 1] },
+  },
+};
 
 const Nav = () => {
-  const pathname = usePathname();
   return (
-    <nav className="flex gap-8 text-center capitalize">
-      {NAV_LINKS.map((link, i) => (
-        <Link
-          href={link.href}
-          key={i}
-          className={`${pathname === link.href && 'border-b-2'}`}
-        >
-          {link.name}
-          <span className="text-[10px]">{link.subText}</span>
-        </Link>
-      ))}
-    </nav>
+    <motion.div
+      variants={heightAnimation}
+      initial="initial"
+      animate="open"
+      exit="close"
+      className="absolute -top-full z-50 w-full overflow-hidden bg-blue-200"
+    >
+      <div className="container mx-auto flex h-full items-center justify-center">
+        <NavList />
+      </div>
+    </motion.div>
   );
 };
 
