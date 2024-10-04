@@ -46,7 +46,7 @@ const Nav = () => {
   return (
     <ul className="flex flex-col items-center gap-8 font-primary text-4xl font-semibold uppercase text-accent">
       {NAV_LINKS.map((link, index) => (
-        <li key={index} className="flex">
+        <li key={index} className="flex flex-row">
           <Link
             href={link.href}
             key={index}
