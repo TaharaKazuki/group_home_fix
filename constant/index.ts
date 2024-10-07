@@ -58,3 +58,22 @@ export const FEE_ITEMS = [
     subDesc: `12〜3月、7月〜9月 ${formatYen(85500)}円〜${formatYen(89500)}円`,
   },
 ];
+
+export const EQUIPMENT_ITEMS = [
+  {
+    desc: 'プライベート個室',
+    imageSrc: '/assets/hero/hero_background_1.png',
+  },
+  {
+    desc: 'Wi-Fi・冷暖房・部屋鍵を完備',
+    imageSrc: '/assets/hero/hero_background_1.png',
+  },
+  {
+    desc: '世話人も常駐しており安心です',
+    imageSrc: '/assets/hero/hero_background_1.png',
+  },
+  {
+    desc: '体験利用も可能です。※要予約',
+    imageSrc: '/assets/hero/hero_background_1.png',
+  },
+];

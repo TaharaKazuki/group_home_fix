@@ -1,4 +1,4 @@
-import ScheduleSection from '@/components/sections/Schedule';
+import EquipmentSection from '@/components/sections/Equipment';
 import { FeeItem } from '@/components/ui/feeItem';
 import { FEE_ITEMS } from '@/constant';
 import { formatYen } from '@/lib/format';
@@ -6,12 +6,12 @@ import { formatYen } from '@/lib/format';
 const EquipmentPage = () => {
   return (
     <main className="container mx-auto">
-      <ScheduleSection />
-      <div className="flex lg:flex-row flex-col justify-center pt-[10vw]">
-        <div className="flex-shrink-0 w-[16vw] font-semibold text-2xl">
+      <EquipmentSection />
+      <div className="mt-3 lg:mt-0 flex lg:flex-row flex-col justify-center pt-[10vw]">
+        <p className="flex-shrink-0 w-[16vw] font-semibold text-2xl">
           Fees
           <span className="block text-xs font-normal mt-2">料金詳細</span>
-        </div>
+        </p>
         <div className="w-full mt-3 lg:mt-0">
           {FEE_ITEMS.map((item, i) => (
             <FeeItem
