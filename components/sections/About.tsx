@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 const AboutSection = () => {
   return (
-    <section className="pt-[17vw]">
+    <section className="pt-[15vw]">
       <div className="lg:container relative mx-auto flex h-full flex-col items-center xl:flex-row">
         <div className="grid w-full gap-[10vw] grid-cols-1 lg:grid-cols-2">
           <div>
             <h2 className="lg:text-2xl text-lg text-center lg:text-left font-semibold">
-              私たちイキシアグループホームについて
+              私たちイキシアグループホームです
             </h2>
             <p className="pt-10 lg:leading-10 leading-6 text-center lg:text-left lg:text-base text-sm">
               サンプル文章が入ります
