@@ -9,7 +9,7 @@ const EquipmentPage = () => {
       <ScheduleSection />
       <div className="container mx-auto flex flex-row justify-center pt-[10vw]">
         <div className="flex-shrink-0 w-[16vw] font-semibold text-2xl">
-          Fee
+          Fees
           <span className="block text-xs font-normal mt-2">料金詳細</span>
         </div>
         <div className="w-full">

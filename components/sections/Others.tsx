@@ -25,7 +25,10 @@ const OthersSection = () => {
                 サンプル文章サンプル文章サンプル文章サンプル文章が入ります。
               </p>
               <p className="mt-3 text-center">
-                <Link href={'/about'} className="underline underline-offset-4">
+                <Link
+                  href={'/equipment'}
+                  className="underline underline-offset-4"
+                >
                   View more
                 </Link>
               </p>
