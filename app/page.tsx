@@ -1,6 +1,7 @@
 'use client';
 
-import Hero from '@/components/Hero';
+import AboutSection from '@/components/About';
+import HeroSection from '@/components/Hero';
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -15,7 +16,8 @@ export default function Home() {
 
   return (
     <div className="h-full overflow-hidden">
-      <Hero />
+      <HeroSection />
+      <AboutSection />
       <div className="h-[4000px]" />
     </div>
   );

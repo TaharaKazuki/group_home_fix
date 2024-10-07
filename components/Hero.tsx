@@ -1,4 +1,4 @@
-const Hero = () => {
+const HeroSection = () => {
   return (
     <section className="relative h-[100vh] text-white xl:h-screen">
       <div className="relative mx-auto flex h-full flex-col items-center xl:flex-row">
@@ -6,7 +6,7 @@ const Hero = () => {
         <div
           data-scroll
           data-scroll-speed="0.4"
-          className="flex h-full flex-1 flex-col items-center justify-center text-center text-black"
+          className="flex h-full flex-1 z-10 flex-col items-center justify-center text-center text-black"
         >
           Sample title
         </div>
@@ -15,4 +15,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;
