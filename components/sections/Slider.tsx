@@ -1,11 +1,19 @@
 import { CAROUSEL_IMAGES } from '@/constant';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const SliderSection = () => {
   const [positionIndexes, setPositionIndexes] = useState<number[]>([
     0, 1, 2, 3, 4,
   ]);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
@@ -14,16 +22,18 @@ const SliderSection = () => {
       );
       return updatedIndexes;
     });
+    setActiveIndex((prevIndex) => (prevIndex + 1) % CAROUSEL_IMAGES.length);
   };
 
-  const handleBack = () => {
+  const handleIndicatorClick = (index: number) => {
     setPositionIndexes((prevIndexes) => {
+      const offset = (index - activeIndex + CAROUSEL_IMAGES.length) % 5;
       const updatedIndexes = prevIndexes.map(
-        (prevIndex) => (prevIndex + 4) % 5
+        (prevIndex) => (prevIndex + offset) % 5
       );
-
       return updatedIndexes;
     });
+    setActiveIndex(index);
   };
 
   const positions = ['center', 'left1', 'left', 'right', 'right1'];
@@ -51,19 +61,16 @@ const SliderSection = () => {
             style={{ width: '40%', position: 'absolute' }}
           />
         ))}
-        <div className="flex flex-row gap-3">
-          <button
-            className="text-white mt-[400px] bg-indigo-400 rounded-md py-2 px-4"
-            onClick={handleBack}
-          >
-            Back
-          </button>
-          <button
-            className="text-white mt-[400px] bg-indigo-400 rounded-md py-2 px-4"
-            onClick={handleNext}
-          >
-            Next
-          </button>
+        <div className="flex gap-2">
+          {CAROUSEL_IMAGES.map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                activeIndex === index ? 'bg-red-300' : 'bg-gray-400'
+              }`}
+              onClick={() => handleIndicatorClick(index)}
+            />
+          ))}
         </div>
       </div>
     </section>
