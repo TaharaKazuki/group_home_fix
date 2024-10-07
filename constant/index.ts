@@ -1,3 +1,5 @@
+import { formatYen } from '@/lib/format';
+
 export const LINKS = [
   { href: '/', name: 'ホーム' },
   { href: '/about', name: '私たちについて' },
@@ -34,25 +36,25 @@ export const CAROUSEL_IMAGES = [
 export const FEE_ITEMS = [
   {
     title: '家賃',
-    desc: '37,000円〜41,000円',
+    desc: `${formatYen(37000)}円〜${formatYen(41000)}円`,
   },
   {
     title: '食費',
-    desc: '朝350円/夜500円（各1食',
-    subDesc: '合計 月25,000円',
+    desc: `朝 ${formatYen(350)}円/夜 ${formatYen(500)}円（各1食)`,
+    subDesc: `合計 月${formatYen(25000)}円`,
   },
   {
     title: '水道光熱費',
-    desc: '基本12,000円/月',
-    subDesc: '※12月〜3月、7月〜9月は20,000円/月',
+    desc: `基本 ${formatYen(12000)}円/月`,
+    subDesc: `※12月〜3月、7月〜9月は${formatYen(20000)}円/月`,
   },
   {
     title: '日用品費',
-    desc: '3,000円/月',
+    desc: `${formatYen(3000)}円/月`,
   },
   {
     title: '合計',
-    desc: '77,500円〜81,500円',
-    subDesc: '12〜3月、7月〜9月 85,500円〜89,500円',
+    desc: `${formatYen(77500)}円〜${formatYen(81500)}円`,
+    subDesc: `12〜3月、7月〜9月 ${formatYen(85500)}円〜${formatYen(89500)}円`,
   },
 ];

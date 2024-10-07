@@ -1,16 +1,16 @@
 import ScheduleSection from '@/components/sections/Schedule';
 import { FeeItem } from '@/components/ui/feeItem';
 import { FEE_ITEMS } from '@/constant';
-import { div, span, main } from 'framer-motion/client';
+import { formatYen } from '@/lib/format';
 
 const EquipmentPage = () => {
   return (
     <main className="container mx-auto">
       <ScheduleSection />
       <div className="container mx-auto flex flex-row justify-center pt-[10vw]">
-        <div className="flex-shrink-0 w-[16vw] font-semibold">
+        <div className="flex-shrink-0 w-[16vw] font-semibold text-2xl">
           Fee
-          <span className="block text-xs font-normal">料金</span>
+          <span className="block text-xs font-normal mt-2">料金詳細</span>
         </div>
         <div className="w-full">
           {FEE_ITEMS.map((item, i) => (
@@ -28,11 +28,13 @@ const EquipmentPage = () => {
         <p className="text-2xl font-bold">家賃補助の一例</p>
         <div className="flex flex-row mt-4 gap-5">
           <span className="block">特定障がい者特別給付費支援対象者</span>
-          <span className="block font-semibold">-10,000円</span>
+          <span className="block font-semibold">-{formatYen(10000)}円</span>
         </div>
         <div className="flex flex-row mt-4 gap-5">
           <span className="block">補助を受けた場合の合計負担額</span>
-          <span className="block font-semibold">67,500円〜71,500円</span>
+          <span className="block font-semibold">{`${formatYen(
+            67500
+          )}円〜${formatYen(71500)}円`}</span>
         </div>
       </div>
     </main>
