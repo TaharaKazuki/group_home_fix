@@ -1,7 +1,10 @@
 'use client';
 
-import AboutSection from '@/components/About';
-import HeroSection from '@/components/Hero';
+import HeroSection from '@/components/sections/Hero';
+import AboutSection from '@/components/sections/About';
+import ScheduleSection from '@/components/sections/Schedule';
+import SliderSection from '@/components/sections/Slider';
+
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -18,7 +21,8 @@ export default function Home() {
     <div className="h-full overflow-hidden">
       <HeroSection />
       <AboutSection />
-      <div className="h-[4000px]" />
+      <ScheduleSection />
+      <SliderSection />
     </div>
   );
 }
