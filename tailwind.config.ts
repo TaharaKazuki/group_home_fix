@@ -18,7 +18,11 @@ const config: Config = {
       lg: '960px',
       xl: '1430px',
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        hero_image: 'url(/assets/hero/hero_background_1.png)',
+      },
+    },
   },
   // plugins: [require('tailwindcss-animate')],
 };

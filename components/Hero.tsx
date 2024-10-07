@@ -1,11 +1,12 @@
 const Hero = () => {
   return (
-    <section className="relative h-[100vh] text-white xl:h-screen bg-red-500">
-      <div className="container relative mx-auto flex h-full flex-col items-center xl:flex-row">
+    <section className="relative h-[100vh] text-white xl:h-screen">
+      <div className="relative mx-auto flex h-full flex-col items-center xl:flex-row">
+        <div className="absolute size-full bg-hero_image bg-no-repeat object-cover" />
         <div
           data-scroll
           data-scroll-speed="0.4"
-          className="flex h-full flex-1 flex-col items-center justify-center gap-4 text-center xl:gap-10 xl:pb-12"
+          className="flex h-full flex-1 flex-col items-center justify-center text-center text-black"
         >
           Sample title
         </div>
