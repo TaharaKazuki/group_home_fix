@@ -20,11 +20,13 @@ export default function Home() {
 
   return (
     <div className="h-full overflow-hidden">
-      <HeroSection />
-      <AboutSection />
-      <ScheduleSection />
-      <OthersSection />
-      <SliderSection />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <ScheduleSection />
+        <OthersSection />
+        <SliderSection />
+      </main>
     </div>
   );
 }
