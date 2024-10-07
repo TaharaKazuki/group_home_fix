@@ -48,7 +48,7 @@ const SliderSection = () => {
 
   return (
     <section>
-      <div className="flex items-center flex-col justify-center h-screen relative">
+      <div className="relative flex items-center flex-col justify-center lg:h-[60vh] h-[40vh]">
         {CAROUSEL_IMAGES.map((image, i) => (
           <motion.img
             key={i}
@@ -58,10 +58,10 @@ const SliderSection = () => {
             animate={positions[positionIndexes[i]]}
             variants={imageVariants}
             transition={{ duration: 0.5 }}
-            style={{ width: '30%', position: 'absolute' }}
+            className="absolute w-[80%] lg:w-[40%]"
           />
         ))}
-        <div className="absolute bottom-10 flex gap-2">
+        <div className="absolute bottom-8 flex gap-2">
           {CAROUSEL_IMAGES.map((_, index) => (
             <button
               key={index}
