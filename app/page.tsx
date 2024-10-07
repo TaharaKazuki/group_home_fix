@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/Hero';
 import AboutSection from '@/components/sections/About';
 import ScheduleSection from '@/components/sections/Schedule';
 import OthersSection from '@/components/sections/Others';
-// import SliderSection from '@/components/sections/Slider';
+import SliderSection from '@/components/sections/Slider';
 
 import { useEffect } from 'react';
 
@@ -24,7 +24,7 @@ export default function Home() {
       <AboutSection />
       <ScheduleSection />
       <OthersSection />
-      {/* <SliderSection /> */}
+      <SliderSection />
     </div>
   );
 }

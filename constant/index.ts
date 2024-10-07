@@ -10,16 +10,22 @@ export const LINKS = [
 export const CAROUSEL_IMAGES = [
   {
     id: 0,
-    imageSrc:
-      'https://images.pexels.com/photos/210922/pexels-photo-210922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
     id: 1,
-    imageSrc:
-      'https://images.pexels.com/photos/164758/pexels-photo-164758.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    imageSrc: '/assets/hero/hero_background_2.png',
   },
   {
     id: 2,
-    imageSrc: '/',
+    imageSrc: '/assets/hero/hero_background_3.png',
+  },
+  {
+    id: 3,
+    imageSrc: '/assets/hero/hero_background_2.png',
+  },
+  {
+    id: 4,
+    imageSrc: '/assets/hero/hero_background_3.png',
   },
 ];
