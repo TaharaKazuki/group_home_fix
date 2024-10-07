@@ -24,17 +24,23 @@ const EquipmentPage = () => {
         </div>
       </div>
 
-      <div className="border border-red-300 border-dashed p-10 rounded-lg mt-6 shadow-md">
-        <p className="text-2xl font-bold">家賃補助の一例</p>
-        <div className="flex flex-row mt-4 gap-5">
-          <span className="block">特定障がい者特別給付費支援対象者</span>
-          <span className="block font-semibold">-{formatYen(10000)}円</span>
+      <div className="border border-red-300 border-dashed lg:p-10 p-3 rounded-lg mt-6 shadow-md">
+        <p className="lg:text-2xl font-bold">家賃補助の一例</p>
+        <div className="flex flex-row mt-4 gap-5 items-center">
+          <span className="block lg:text-base text-xs">
+            特定障がい者特別給付費支援対象者
+          </span>
+          <span className="block font-semibold text-xs lg:text-base">
+            -{formatYen(10000)}円
+          </span>
         </div>
         <div className="flex flex-row mt-4 gap-5">
-          <span className="block">補助を受けた場合の合計負担額</span>
-          <span className="block font-semibold">{`${formatYen(
-            67500
-          )}円〜${formatYen(71500)}円`}</span>
+          <span className="block lg:text-base text-xs">
+            補助を受けた場合の合計負担額
+          </span>
+          <span className="block font-semibold text-xs lg:text-base">
+            {`${formatYen(67500)}円〜${formatYen(71500)}円`}
+          </span>
         </div>
       </div>
     </main>
