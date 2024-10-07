@@ -4,33 +4,33 @@ type FeeItemProps = {
   title: string;
   description: string;
   subDescription?: string;
-  isLast?: boolean;
 };
 
 export const FeeItem = ({
   title,
   description,
   subDescription,
-  isLast,
 }: FeeItemProps) => (
-  <dl className={cn('flex gap-8')}>
+  <dl
+    className={cn(
+      'flex lg:gap-8 flex-col lg:flex-row lg:border-none border-t border-dotted py-6 lg:py-0'
+    )}
+  >
     <dt
       className={cn(
-        'flex-shrink w-[12vw] items-center py-8 border-gray-300 border-t border-dotted',
-        isLast && 'border-b'
+        'flex-shrink lg:w-[12vw] items-center lg:py-8 border-gray-300 lg:border-t border-dotted w-full text-sm lg:text-base'
       )}
     >
       {title}
     </dt>
     <dd
       className={cn(
-        'w-full items-center py-8 border-gray-300 border-t border-dotted',
-        isLast && 'border-b'
+        'w-full items-center lg:py-8 border-gray-300 lg:border-t border-dotted mt-4 lg:mt-0 text-xs lg:text-base'
       )}
     >
       {description}
       {subDescription && (
-        <span className="block text-xs mt-3">{subDescription}</span>
+        <span className="block text-xs lg:mt-3 mt-1">{subDescription}</span>
       )}
     </dd>
   </dl>

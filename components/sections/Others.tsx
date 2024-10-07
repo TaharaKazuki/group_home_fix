@@ -4,7 +4,7 @@ import Link from 'next/link';
 const OthersSection = () => {
   return (
     <section className="pt-[10vw]">
-      <div className="container relative mx-auto flex h-full flex-col items-center xl:flex-row lg:gap-32 gap-10">
+      <div className="container relative mx-auto flex h-full flex-col items-center lg:flex-row lg:gap-32 gap-10">
         <div>
           <img
             src="/assets/hero/hero_background_1.png"

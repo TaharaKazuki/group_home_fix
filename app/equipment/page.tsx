@@ -7,12 +7,12 @@ const EquipmentPage = () => {
   return (
     <main className="container mx-auto">
       <ScheduleSection />
-      <div className="container mx-auto flex flex-row justify-center pt-[10vw]">
+      <div className="flex lg:flex-row flex-col justify-center pt-[10vw]">
         <div className="flex-shrink-0 w-[16vw] font-semibold text-2xl">
           Fees
           <span className="block text-xs font-normal mt-2">料金詳細</span>
         </div>
-        <div className="w-full">
+        <div className="w-full mt-3 lg:mt-0">
           {FEE_ITEMS.map((item, i) => (
             <FeeItem
               key={i}
@@ -24,7 +24,7 @@ const EquipmentPage = () => {
         </div>
       </div>
 
-      <div className="border border-red-300 p-10 rounded-lg mt-6 bg-red-300 text-white shadow-md">
+      <div className="border border-red-300 border-dashed p-10 rounded-lg mt-6 shadow-md">
         <p className="text-2xl font-bold">家賃補助の一例</p>
         <div className="flex flex-row mt-4 gap-5">
           <span className="block">特定障がい者特別給付費支援対象者</span>
