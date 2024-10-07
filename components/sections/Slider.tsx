@@ -7,13 +7,17 @@ const SliderSection = () => {
     0, 1, 2, 3, 4,
   ]);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
+    if (isPaused) return;
+
     const interval = setInterval(() => {
       handleNext();
     }, 8000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused]);
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
@@ -25,7 +29,9 @@ const SliderSection = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % CAROUSEL_IMAGES.length);
   };
 
+  // インジケーターをクリックした際に呼び出される関数
   const handleIndicatorClick = (index: number) => {
+    setIsPaused(true); // インターバルを一時停止
     setPositionIndexes((prevIndexes) => {
       const offset = (index - activeIndex + CAROUSEL_IMAGES.length) % 5;
       const updatedIndexes = prevIndexes.map(
@@ -34,6 +40,10 @@ const SliderSection = () => {
       return updatedIndexes;
     });
     setActiveIndex(index);
+
+    setTimeout(() => {
+      setIsPaused(false);
+    }, 2000); // 2秒後に再びスライドを開始
   };
 
   const positions = ['center', 'left1', 'left', 'right', 'right1'];
