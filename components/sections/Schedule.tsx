@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 
 const ScheduleSection = () => {
   return (
-    <section className="pt-[17vw]">
+    <section className="pt-[10vw]">
       <div className="container relative mx-auto flex h-full flex-col items-center xl:flex-row">
         <div>
           <img

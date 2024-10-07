@@ -22,6 +22,9 @@ const config: Config = {
       backgroundImage: {
         hero_image: 'url(/assets/hero/hero_background_2.png)',
       },
+      aspectRatio: {
+        '5/4': '5 / 4',
+      },
     },
   },
   // plugins: [require('tailwindcss-animate')],
