@@ -7,7 +7,7 @@ const heightAnimation = {
     height: 0,
   },
   open: {
-    height: '85vh',
+    height: '95vh',
     transition: { duration: 1, ease: [0.75, 0, 0.23, 1] },
   },
   close: {

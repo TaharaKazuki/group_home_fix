@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const ScheduleSection = () => {
   return (
-    <section className="pt-[17vw] xl:h-[90vh] xl:w-screen xl:py-0">
+    <section className="pt-[17vw]">
       <div className="container relative mx-auto flex h-full flex-col items-center xl:flex-row">
         <div>
           <img

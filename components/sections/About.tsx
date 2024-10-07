@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const AboutSection = () => {
   return (
-    <section className="pt-[17vw] xl:h-[90vh] xl:w-screen xl:py-0">
+    <section className="pt-[17vw]">
       <div className="lg:container relative mx-auto flex h-full flex-col items-center xl:flex-row">
         <div className="grid w-full gap-[10vw] grid-cols-1 lg:grid-cols-2">
           <div>
