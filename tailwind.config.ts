@@ -20,7 +20,7 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        hero_image: 'url(/assets/hero/hero_background_1.png)',
+        hero_image: 'url(/assets/hero/hero_background_2.png)',
       },
     },
   },
