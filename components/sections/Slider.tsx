@@ -6,18 +6,15 @@ const SliderSection = () => {
   const [positionIndexes, setPositionIndexes] = useState<number[]>([
     0, 1, 2, 3, 4,
   ]);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [_, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    if (isPaused) return;
-
     const interval = setInterval(() => {
       handleNext();
-    }, 8000);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, []);
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
@@ -27,23 +24,6 @@ const SliderSection = () => {
       return updatedIndexes;
     });
     setActiveIndex((prevIndex) => (prevIndex + 1) % CAROUSEL_IMAGES.length);
-  };
-
-  // インジケーターをクリックした際に呼び出される関数
-  const handleIndicatorClick = (index: number) => {
-    setIsPaused(true); // インターバルを一時停止
-    setPositionIndexes((prevIndexes) => {
-      const offset = (index - activeIndex + CAROUSEL_IMAGES.length) % 5;
-      const updatedIndexes = prevIndexes.map(
-        (prevIndex) => (prevIndex + offset) % 5
-      );
-      return updatedIndexes;
-    });
-    setActiveIndex(index);
-
-    setTimeout(() => {
-      setIsPaused(false);
-    }, 2000); // 2秒後に再びスライドを開始
   };
 
   const positions = ['center', 'left1', 'left', 'right', 'right1'];
@@ -58,7 +38,7 @@ const SliderSection = () => {
 
   return (
     <section>
-      <div className="relative flex items-center flex-col justify-center lg:h-[60vh] h-[40vh]">
+      <div className="flex items-center flex-col justify-center lg:h-[60vh] h-[45vh]">
         {CAROUSEL_IMAGES.map((image, i) => (
           <motion.img
             key={i}
@@ -71,17 +51,6 @@ const SliderSection = () => {
             className="absolute w-[80%] lg:w-[40%]"
           />
         ))}
-        <div className="absolute bottom-8 flex gap-2">
-          {CAROUSEL_IMAGES.map((_, index) => (
-            <button
-              key={index}
-              className={`size-2 rounded-full ${
-                activeIndex === index ? 'bg-red-300' : 'bg-gray-400'
-              }`}
-              onClick={() => handleIndicatorClick(index)}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );
