@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { FAQ_LIST } from '@/constant';
 
 interface AccordionItemProps {
   question: string;
@@ -11,19 +12,15 @@ interface AccordionItemProps {
 const AccordionItem = ({ question, answer }: AccordionItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // アコーディオンの開閉を切り替える
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleAccordion = () => setIsOpen(!isOpen);
 
-  // 開閉のためのアニメーション設定
   const variants = {
     open: { height: 'auto', opacity: 1 },
     closed: { height: 0, opacity: 0 },
   };
 
   return (
-    <div className="border-b border-gray-300">
+    <div className="border-b border-gray-300 border-dotted">
       <button
         onClick={toggleAccordion}
         className="w-full text-left py-4 font-semibold focus:outline-none"
@@ -43,33 +40,24 @@ const AccordionItem = ({ question, answer }: AccordionItemProps) => {
   );
 };
 
-const AccordionList = () => {
-  const faqList = [
-    {
-      question: '質問1: こちらは何ですか？',
-      answer: 'これはアコーディオンの答えです。',
-    },
-    {
-      question: '質問2: 使用方法は？',
-      answer: '使用方法は簡単です。クリックして展開します。',
-    },
-    {
-      question: '質問3: カスタマイズ可能ですか？',
-      answer: 'はい、自由にカスタマイズできます。',
-    },
-  ];
-
+const QuestionsPage = () => {
   return (
-    <section className="container mx-auto my-8">
-      {faqList.map((item, index) => (
-        <AccordionItem
-          key={index}
-          question={item.question}
-          answer={item.answer}
-        />
-      ))}
-    </section>
+    <main className="pt-[10vw] container mx-auto">
+      <p className="font-semibold text-2xl">
+        Equipments
+        <span className="block text-xs font-normal mt-2">設備など</span>
+      </p>
+      <section className="my-8">
+        {FAQ_LIST.map((item, index) => (
+          <AccordionItem
+            key={index}
+            question={item.question}
+            answer={item.answer}
+          />
+        ))}
+      </section>
+    </main>
   );
 };
 
-export default AccordionList;
+export default QuestionsPage;
