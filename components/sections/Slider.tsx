@@ -37,7 +37,7 @@ const SliderSection = () => {
   };
 
   return (
-    <section>
+    <section className="relative">
       <div className="flex items-center flex-col justify-center lg:h-[60vh] h-[45vh]">
         {CAROUSEL_IMAGES.map((image, i) => (
           <motion.img
