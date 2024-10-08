@@ -7,7 +7,7 @@ const heightAnimation = {
     height: 0,
   },
   open: {
-    height: '95vh',
+    height: '100vh',
     transition: { duration: 1, ease: [0.75, 0, 0.23, 1] },
   },
   close: {
@@ -23,7 +23,7 @@ const Nav = () => {
       initial="initial"
       animate="open"
       exit="close"
-      className="absolute -top-[40px] z-50 w-full overflow-hidden bg-blue-200"
+      className="absolute -top-[40px] z-50 w-full overflow-hidden bg-blue-300"
     >
       <div className="container mx-auto flex h-full items-center justify-center">
         <NavList />

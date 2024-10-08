@@ -44,13 +44,13 @@ const getLetter = (name: string) => {
 const Nav = () => {
   const { toggleHandler } = useNav();
   return (
-    <ul className="flex flex-col items-center gap-8 font-primary text-4xl font-semibold uppercase text-accent">
+    <ul className="flex flex-col items-center gap-8 font-primary text-4xl font-semibold">
       {LINKS.map((link, index) => (
         <li key={index} className="flex flex-row">
           <Link
             href={link.href}
             key={index}
-            className="flex items-baseline overflow-hidden transition-all xl:hover:text-white text-sm lg:text-base"
+            className="flex items-baseline overflow-hidden transition-all text-base lg:text-lg"
             onClick={toggleHandler}
           >
             {getLetter(link.name)}
