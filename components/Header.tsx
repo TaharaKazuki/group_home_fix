@@ -26,19 +26,19 @@ const Header = () => {
           >
             <span
               className={cn(
-                'absolute left-0 h-[1.5px] w-full bg-current transition-transform duration-300 will-change-transform',
+                'absolute left-0 h-[1px] w-full bg-current transition-transform duration-300 will-change-transform',
                 navActive ? 'top-1/2 rotate-45' : 'top-0 translate-y-0'
               )}
             />
             <span
               className={cn(
-                'absolute left-0 h-[1.5px] w-full bg-current transition-opacity duration-300',
+                'absolute left-0 h-[1px] w-full bg-current transition-opacity duration-300',
                 navActive ? 'opacity-0' : 'top-1/2'
               )}
             />
             <span
               className={cn(
-                'absolute left-0 h-[1.5px] w-full bg-current transition-transform duration-300 will-change-transform',
+                'absolute left-0 h-[1px] w-full bg-current transition-transform duration-300 will-change-transform',
                 navActive ? 'top-1/2 -rotate-45' : 'bottom-0 translate-y-0'
               )}
             />
