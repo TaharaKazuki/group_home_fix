@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { LINK } from '@/constant';
 import Link from 'next/link';
 
 const OthersSection = () => {
@@ -26,7 +27,7 @@ const OthersSection = () => {
               </p>
               <p className="mt-3 text-center">
                 <Link
-                  href={'/equipment'}
+                  href={LINK.EQUIPMENT}
                   className="underline underline-offset-4"
                 >
                   View more
@@ -56,7 +57,7 @@ const OthersSection = () => {
               </p>
               <p className="mt-3 text-center">
                 <Link
-                  href={'/questions'}
+                  href={LINK.QUESTIONS}
                   className="underline underline-offset-4"
                 >
                   View more

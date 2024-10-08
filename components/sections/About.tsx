@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { formatDesc } from '../ui/formatDesc';
-import { ABOUT_SECTION_DESC } from '@/constant';
+import { ABOUT_SECTION_DESC, LINK } from '@/constant';
 
 const AboutSection = () => {
   return (
@@ -10,13 +10,13 @@ const AboutSection = () => {
         <div className="grid w-full gap-[10vw] grid-cols-1 lg:grid-cols-2">
           <div>
             <h2 className="lg:text-2xl text-lg text-center lg:text-left font-semibold">
-              私たちイキシアグループホームについて
+              私たちについて
             </h2>
             <p className="pt-10 lg:leading-10 leading-6 text-center lg:text-left lg:text-base text-sm">
               {formatDesc(ABOUT_SECTION_DESC)}
             </p>
             <p className="mt-6 text-center lg:text-left">
-              <Link href={'/about'} className="underline underline-offset-4">
+              <Link href={LINK.ABOUT} className="underline underline-offset-4">
                 View more
               </Link>
             </p>
