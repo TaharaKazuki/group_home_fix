@@ -94,7 +94,7 @@ export const FAQ_LIST = [
   },
   {
     question: '薬の飲み忘れが心配なのですが？',
-    answer: 'A.スタッフが服用を管理します。ご安心ください。',
+    answer: 'スタッフが服用を管理します。ご安心ください。',
   },
   {
     question: 'ペットの衛生面は問題ありませんか？',
@@ -103,5 +103,38 @@ export const FAQ_LIST = [
   {
     question: 'ペットと一緒に散歩できますか？',
     answer: 'A.もちろん可能です。一緒にでかけましょう！',
+  },
+];
+
+export const SCHEDULE_ITEMS = [
+  {
+    title: 'WALK',
+    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    imageSrc: '/assets/hero/hero_background_1.png',
+  },
+  {
+    title: 'LIFE',
+    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    imageSrc: '/assets/hero/hero_background_1.png',
+  },
+  {
+    title: 'COMMUNITY',
+    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    imageSrc: '/assets/hero/hero_background_1.png',
+  },
+  {
+    title: 'MONEY',
+    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    imageSrc: '/assets/hero/hero_background_1.png',
+  },
+  {
+    title: 'WORKING',
+    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    imageSrc: '/assets/hero/hero_background_1.png',
+  },
+  {
+    title: 'MEETING',
+    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    imageSrc: '/assets/hero/hero_background_1.png',
   },
 ];

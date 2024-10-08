@@ -1,5 +1,7 @@
 'use client';
 
+import { SCHEDULE_ITEMS } from '@/constant';
+import { cn } from '@/lib/utils';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 
 type ScheduleItemProps = {
@@ -17,7 +19,16 @@ const ScheduleItem = ({
 }: ScheduleItemProps) => {
   return (
     <div className="grid w-full gap-[10vw] grid-cols-1 lg:grid-cols-2">
-      <div className={`order-${isReversed ? 2 : 1}`}>
+      {/* 画像部分 */}
+      <div className={cn('order-1', isReversed && 'lg:order-2')}>
+        <img
+          src={imageSrc}
+          alt={title}
+          className="size-full object-cover aspect-square"
+        />
+      </div>
+      {/* テキスト部分 */}
+      <div className={cn('order-2', isReversed && 'lg:order-1')}>
         <h2 className="lg:text-2xl text-lg text-center lg:text-left font-semibold">
           {title}
         </h2>
@@ -29,13 +40,6 @@ const ScheduleItem = ({
             </span>
           ))}
         </p>
-      </div>
-      <div className={`order-${isReversed ? 1 : 2}`}>
-        <img
-          src={imageSrc}
-          alt={title}
-          className="size-full object-cover aspect-square"
-        />
       </div>
     </div>
   );
@@ -58,25 +62,6 @@ const SchedulePage = () => {
     ['#FF6347', '#FFFF00', '#FF6347', '#000080']
   );
 
-  const scheduleItems = [
-    {
-      title: 'WALK',
-      description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
-      imageSrc: '/assets/hero/hero_background_1.png',
-    },
-    {
-      title: 'RUN',
-      description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
-      imageSrc: '/assets/hero/hero_background_1.png',
-    },
-    {
-      title: 'JUMP',
-      description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
-      imageSrc: '/assets/hero/hero_background_1.png',
-    },
-    // 他のスケジュール項目も同様に追加
-  ];
-
   return (
     <>
       <main className="pt-[10vw] container mx-auto">
@@ -85,11 +70,11 @@ const SchedulePage = () => {
           style={{ scaleY, backgroundColor, transformOrigin: 'top' }}
         />
         <p className="font-semibold text-2xl">
-          Schedule
-          <span className="block text-xs font-normal mt-2">一日の流れなど</span>
+          Life
+          <span className="block text-xs font-normal mt-2">暮らしについて</span>
         </p>
-        <section className="mt-24 flex flex-col gap-[10vw]">
-          {scheduleItems.map((item, index) => (
+        <section className="lg:mt-24 mt-16 flex flex-col gap-[10vw]">
+          {SCHEDULE_ITEMS.map((item, index) => (
             <ScheduleItem
               key={index}
               title={item.title}
