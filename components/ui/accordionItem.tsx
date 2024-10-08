@@ -31,14 +31,17 @@ export const AccordionItem = ({
     <div className="border-b border-gray-300 border-dotted">
       <button
         onClick={toggleAccordion}
-        className="w-full text-left py-4 text-xs lg:text-base focus:outline-none flex flex-row items-center justify-start gap-2"
+        className="w-full text-left py-4 text-xs lg:text-base focus:outline-none flex flex-row items-center justify-between gap-2"
       >
         <p className="text-red-300 font-semibold">Q.{questionId}</p>
         {question}
         {isOpen ? (
-          <IoIosArrowDropupCircle size={20} className="text-red-300" />
+          <IoIosArrowDropupCircle size={20} className="text-red-300 ml-auto" />
         ) : (
-          <IoIosArrowDropdownCircle size={20} className="text-red-300" />
+          <IoIosArrowDropdownCircle
+            size={20}
+            className="text-red-300 ml-auto"
+          />
         )}
       </button>
       <motion.div

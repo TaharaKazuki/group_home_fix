@@ -81,7 +81,7 @@ export const EQUIPMENT_ITEMS = [
 export const FAQ_LIST = [
   {
     question: '夜勤スタッフはいますか？',
-    answer: 'はい、常駐しており夜が不安な方も安心してお過ごし頂けます。',
+    answer: '常駐しておりますので、夜が不安な方も安心してお過ごし頂けます。',
   },
   {
     question: '入居にかかる費用はどうなってますか？',
@@ -102,6 +102,6 @@ export const FAQ_LIST = [
   },
   {
     question: 'ペットと一緒に散歩できますか？',
-    answer: 'A.はい、もちろんです。一緒にでかけましょう！',
+    answer: 'A.もちろん可能です。一緒にでかけましょう！',
   },
 ];
