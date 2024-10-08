@@ -45,7 +45,7 @@ const ScheduleItem = ({
   );
 };
 
-const SchedulePage = () => {
+const LifePage = () => {
   const { scrollYProgress } = useScroll();
 
   // scaleY のアニメーション設定
@@ -89,4 +89,4 @@ const SchedulePage = () => {
   );
 };
 
-export default SchedulePage;
+export default LifePage;

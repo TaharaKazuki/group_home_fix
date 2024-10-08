@@ -4,7 +4,7 @@ export const LINKS = [
   { href: '/', name: 'ホーム' },
   { href: '/about', name: '私たちについて' },
   { href: '/schedule', name: '暮らし' },
-  { href: '/equipment', name: '設備・料金など' },
+  { href: '/equipment', name: '設備・料金' },
   { href: '/questions', name: 'よくある質問' },
   { href: '/contact', name: 'お問い合わせ' },
 ];
@@ -73,7 +73,7 @@ export const EQUIPMENT_ITEMS = [
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
-    desc: '体験利用も可能です。※要予約',
+    desc: '体験利用も可能です ※要予約',
     imageSrc: '/assets/hero/hero_background_1.png',
   },
 ];
@@ -109,32 +109,32 @@ export const FAQ_LIST = [
 export const SCHEDULE_ITEMS = [
   {
     title: 'WALK',
-    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    description: `外出のきっかけとして動物と一緒にお散歩。\n動物も入居者様も充実した時間を\n過ごすことができるのがイキシアならではの特徴です。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
-    title: 'LIFE',
-    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    title: 'SUPPORT',
+    description: `市役所・病院など、一人で行くのが不安な方でも\nスタッフが同行しますのでご安心ください。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
     title: 'COMMUNITY',
-    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    description: `入居者様同士で仲良くなって、遊園地などに遊びに行かれることも。\nイキシアでの暮らしを通じて、新しい出会いと楽しい思い出が生まれます。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
     title: 'MONEY',
-    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    description: `お小遣い帳作成のを通して金銭管理のお手伝いも行っております。（希望の方のみ）\n※金銭を直接お預かりする事は行っておりません。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
     title: 'WORKING',
-    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    description: `働く場所を見つけるサポートを実施しております。\n就職先、決定後も安心して就業していただけるようにアフターフォローもおこなっております。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
     title: 'MEETING',
-    description: `サンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります\nサンプル文章が入ります。`,
+    description: `毎月1度、『入居者会議』を行っております。\n入居者の皆様が気持ちよく共同生活を送れるように\nみんなで話し合います。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
 ];
