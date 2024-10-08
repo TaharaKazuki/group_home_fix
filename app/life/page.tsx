@@ -62,7 +62,7 @@ const LifePage = () => {
     <>
       <main className="pt-[10vw] container mx-auto">
         <motion.div
-          className="fixed inset-y-0 left-0 w-[8px]"
+          className="fixed inset-y-0 left-0 lg:w-[1vw] w-[1.8vw]"
           style={{ scaleY, backgroundColor, transformOrigin: 'top' }}
         />
         <p className="font-semibold text-2xl">
