@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/Hero';
 import AboutSection from '@/components/sections/About';
-import ScheduleSection from '@/components/sections/Schedule';
+import LifeSection from '@/components/sections/Life';
 import OthersSection from '@/components/sections/Others';
 import SliderSection from '@/components/sections/Slider';
 
@@ -12,7 +12,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <AboutSection />
-        <ScheduleSection />
+        <LifeSection />
         <OthersSection />
         <SliderSection />
       </main>

@@ -1,15 +1,25 @@
 import { formatYen } from '@/lib/format';
 
+export const ABOUT_SECTION_DESC = `サンプル文章が入ります\nサンプル文章が入りますサンプル文章が入ります\nサンプル文章が入りますサンプル文章が入ります\nサンプル文章が入ります。`;
+
+export const LINK = {
+  HOME: '/',
+  ABOUT: '/about',
+  LIFE: '/life',
+  EQUIPMENT: '/equipment',
+  QUESTIONS: '/questions',
+  CONTACT: '/contact',
+};
+
 export const LINKS = [
-  { href: '/', name: 'ホーム' },
-  { href: '/about', name: '私たちについて' },
-  { href: '/schedule', name: '暮らし' },
-  { href: '/equipment', name: '設備・料金' },
-  { href: '/questions', name: 'よくある質問' },
-  { href: '/contact', name: 'お問い合わせ' },
+  { href: LINK.HOME, name: 'ホーム' },
+  { href: LINK.ABOUT, name: '私たちについて' },
+  { href: LINK.LIFE, name: '暮らし' },
+  { href: LINK.EQUIPMENT, name: '設備・料金' },
+  { href: LINK.QUESTIONS, name: 'よくある質問' },
+  { href: LINK.CONTACT, name: 'お問い合わせ' },
 ];
 
-//TODO carousel用の画像に書き換え
 export const CAROUSEL_IMAGES = [
   {
     id: 0,
@@ -106,7 +116,7 @@ export const FAQ_LIST = [
   },
 ];
 
-export const SCHEDULE_ITEMS = [
+export const LIFE_ITEMS = [
   {
     title: 'WALK',
     description: `外出のきっかけとして動物と一緒にお散歩。\n動物も入居者様も充実した時間を\n過ごすことができるのがイキシアならではの特徴です。`,

@@ -1,22 +1,23 @@
 'use client';
 
-import { SCHEDULE_ITEMS } from '@/constant';
+import { formatDesc } from '@/components/ui/formatDesc';
+import { LIFE_ITEMS } from '@/constant';
 import { cn } from '@/lib/utils';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 
-type ScheduleItemProps = {
+type LifeItemProps = {
   title: string;
   description: string;
   imageSrc: string;
   isReversed: boolean;
 };
 
-const ScheduleItem = ({
+const LifeItem = ({
   title,
   description,
   imageSrc,
   isReversed,
-}: ScheduleItemProps) => {
+}: LifeItemProps) => {
   return (
     <div className="grid w-full gap-[10vw] grid-cols-1 lg:grid-cols-2">
       {/* 画像部分 */}
@@ -29,16 +30,11 @@ const ScheduleItem = ({
       </div>
       {/* テキスト部分 */}
       <div className={cn('order-2', isReversed && 'lg:order-1')}>
-        <h2 className="lg:text-2xl text-lg text-center lg:text-left font-semibold">
+        <h2 className="lg:text-3xl text-lg text-center lg:text-left font-semibold text-red-300">
           {title}
         </h2>
         <p className="pt-5 lg:pt-10 lg:leading-10 leading-6 text-center lg:text-left lg:text-base text-sm">
-          {description.split('\n').map((line, index) => (
-            <span key={index}>
-              {line}
-              <br />
-            </span>
-          ))}
+          {formatDesc(description)}
         </p>
       </div>
     </div>
@@ -74,8 +70,8 @@ const LifePage = () => {
           <span className="block text-xs font-normal mt-2">暮らし</span>
         </p>
         <section className="lg:mt-24 mt-16 flex flex-col gap-[10vw]">
-          {SCHEDULE_ITEMS.map((item, index) => (
-            <ScheduleItem
+          {LIFE_ITEMS.map((item, index) => (
+            <LifeItem
               key={index}
               title={item.title}
               description={item.description}

@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
+import { LINK } from '@/constant';
 import Link from 'next/link';
 
-const ScheduleSection = () => {
+const LifeSection = () => {
   return (
     <section className="pt-[10vw]">
       <div className="container relative mx-auto flex h-full flex-col items-center xl:flex-row">
@@ -23,10 +24,7 @@ const ScheduleSection = () => {
                 サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章が入ります。
               </p>
               <p className="mt-3 text-center lg:text-left">
-                <Link
-                  href={'/schedule'}
-                  className="underline underline-offset-4"
-                >
+                <Link href={LINK.LIFE} className="underline underline-offset-4">
                   View more
                 </Link>
               </p>
@@ -38,4 +36,4 @@ const ScheduleSection = () => {
   );
 };
 
-export default ScheduleSection;
+export default LifeSection;
