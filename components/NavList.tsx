@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { LINKS } from '@/constant';
 import { motion } from 'framer-motion';
 import { useNav } from '@/providers/NavContext';
+import { useEffect } from 'react';
 
 const letterAnim = {
   initial: {
@@ -42,7 +43,19 @@ const getLetter = (name: string) => {
 };
 
 const Nav = () => {
-  const { toggleHandler } = useNav();
+  const { toggleHandler, navActive } = useNav();
+
+  useEffect(() => {
+    if (navActive) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [navActive]);
+
   return (
     <ul className="flex flex-col items-center gap-8 font-primary text-4xl font-semibold">
       {LINKS.map((link, index) => (
