@@ -51,7 +51,10 @@ export const AccordionItem = ({
         transition={{ duration: 0.3 }}
         className="overflow-hidden"
       >
-        <p className="lg:py-4 py-2 text-base lg:text-xl">{answer}</p>
+        <p className="lg:py-4 py-2 text-base lg:text-xl">
+          <span className="text-red-300 inline-block mr-3 lg:mr-4">A.</span>
+          {answer}
+        </p>
       </motion.div>
     </div>
   );

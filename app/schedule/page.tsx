@@ -71,7 +71,7 @@ const SchedulePage = () => {
         />
         <p className="font-semibold text-2xl">
           Life
-          <span className="block text-xs font-normal mt-2">暮らしについて</span>
+          <span className="block text-xs font-normal mt-2">暮らし</span>
         </p>
         <section className="lg:mt-24 mt-16 flex flex-col gap-[10vw]">
           {SCHEDULE_ITEMS.map((item, index) => (

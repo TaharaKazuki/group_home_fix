@@ -13,8 +13,8 @@ const ScheduleSection = () => {
           />
           <div className="flex lg:flex-row flex-col gap-[10vw] mt-6 justify-between">
             <h2 className="lg:text-2xl text-lg text-left lg:text-left font-semibold">
-              Schedule
-              <span className="block text-sm font-normal">1日の流れ</span>
+              Life
+              <span className="block text-sm font-normal">暮らし</span>
             </h2>
             <div>
               <p className="lg:leading-10 leading-6 lg:text-left lg:text-sm text-sm">
@@ -23,7 +23,10 @@ const ScheduleSection = () => {
                 サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章が入ります。
               </p>
               <p className="mt-3 text-center lg:text-left">
-                <Link href={'/about'} className="underline underline-offset-4">
+                <Link
+                  href={'/schedule'}
+                  className="underline underline-offset-4"
+                >
                   View more
                 </Link>
               </p>
