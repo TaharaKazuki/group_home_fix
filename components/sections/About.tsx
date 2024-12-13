@@ -16,8 +16,11 @@ const AboutSection = () => {
               {formatDesc(ABOUT_SECTION_DESC)}
             </p>
             <p className="mt-6 text-center lg:text-left">
-              <Link href={LINK.ABOUT} className="underline underline-offset-4">
-                View more
+              <Link
+                href={LINK.ABOUT}
+                className="relative underline-offset-4 hover:underline-offset-0 before:content-[''] before:absolute before:left-0 before:bottom-[-4px] before:h-[2px] before:w-0 before:bg-red-300 before:transition-all before:duration-300 hover:before:w-full"
+              >
+                <span className="text-base">詳しくはこちら</span>
               </Link>
             </p>
           </div>

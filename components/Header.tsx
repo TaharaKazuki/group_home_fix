@@ -16,10 +16,11 @@ const Header = () => {
           <Button
             variant={'default'}
             size={'lg'}
-            className="rounded-full bg-yellow-300 hidden lg:block"
+            className="rounded-full bg-red-300 hidden lg:block text-white shadow-md hover:bg-red-400 transition-all duration-300"
           >
             お問い合わせはコチラ
           </Button>
+
           <button
             onClick={toggleHandler}
             className="relative z-[60] flex h-6 w-8 items-center justify-center text-accent outline-none"

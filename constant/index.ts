@@ -119,31 +119,37 @@ export const FAQ_LIST = [
 export const LIFE_ITEMS = [
   {
     title: 'WALK',
+    subTitle: 'お散歩',
     description: `外出のきっかけとして動物と一緒にお散歩。\n動物も入居者様も充実した時間を\n過ごすことができるのがイキシアならではの特徴です。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
     title: 'SUPPORT',
+    subTitle: 'サポート',
     description: `市役所・病院など、一人で行くのが不安な方でも\nスタッフが同行しますのでご安心ください。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
     title: 'COMMUNITY',
+    subTitle: 'コミュニティ',
     description: `入居者様同士で仲良くなって、遊園地などに遊びに行かれることも。\nイキシアでの暮らしを通じて、新しい出会いと楽しい思い出が生まれます。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
     title: 'MONEY MANAGEMENT',
+    subTitle: '金銭管理のお手伝い',
     description: `お小遣い帳作成のを通して金銭管理のお手伝いも行っております。（希望の方のみ）\n※金銭を直接お預かりする事は行っておりません。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
     title: 'WORKING',
+    subTitle: 'お仕事について',
     description: `働く場所を見つけるサポートを実施しております。\n就職先、決定後も安心して就業していただけるようにアフターフォローもおこなっております。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
     title: 'MEETING',
+    subTitle: 'ミーティング',
     description: `毎月1度、『入居者会議』を行っております。\n入居者の皆様が気持ちよく共同生活を送れるように\nみんなで話し合います。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },

@@ -14,8 +14,8 @@ const OthersSection = () => {
           />
           <div className="flex flex-col gap-10 mt-6 justify-center">
             <h2 className="lg:text-2xl text-lg text-center font-semibold">
-              Fees・Facilities
-              <span className="block text-sm font-normal">料金・設備</span>
+              料金・設備
+              <span className="block text-sm font-normal">Fees/Facilities</span>
             </h2>
             <div>
               <p className="leading-8 text-center text-sm">
@@ -28,9 +28,9 @@ const OthersSection = () => {
               <p className="mt-3 text-center">
                 <Link
                   href={LINK.EQUIPMENT}
-                  className="underline underline-offset-4"
+                  className="relative underline-offset-4 hover:underline-offset-0 before:content-[''] before:absolute before:left-0 before:bottom-[-4px] before:h-[2px] before:w-0 before:bg-red-300 before:transition-all before:duration-300 hover:before:w-full"
                 >
-                  View more
+                  <span className="text-base">詳しくはこちら</span>
                 </Link>
               </p>
             </div>
@@ -44,8 +44,8 @@ const OthersSection = () => {
           />
           <div className="flex flex-col gap-10 mt-6 justify-center">
             <h2 className="lg:text-2xl text-lg text-center font-semibold">
-              Questions
-              <span className="block text-sm font-normal">よくある質問</span>
+              ご質問について
+              <span className="block text-sm font-normal">Questions</span>
             </h2>
             <div>
               <p className="leading-8 text-center text-sm">
@@ -58,9 +58,9 @@ const OthersSection = () => {
               <p className="mt-3 text-center">
                 <Link
                   href={LINK.QUESTIONS}
-                  className="underline underline-offset-4"
+                  className="relative underline-offset-4 hover:underline-offset-0 before:content-[''] before:absolute before:left-0 before:bottom-[-4px] before:h-[2px] before:w-0 before:bg-red-300 before:transition-all before:duration-300 hover:before:w-full"
                 >
-                  View more
+                  <span className="text-base">詳しくはこちら</span>
                 </Link>
               </p>
             </div>

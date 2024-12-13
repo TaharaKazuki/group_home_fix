@@ -66,8 +66,8 @@ const LifePage = () => {
           style={{ scaleY, backgroundColor, transformOrigin: 'top' }}
         />
         <p className="font-semibold text-2xl">
-          Life
-          <span className="block text-xs font-normal mt-2">暮らし</span>
+          暮らし
+          <span className="block text-xs font-normal mt-2">Life</span>
         </p>
         <section className="lg:mt-20 mt-16 flex flex-col gap-[10vw]">
           {LIFE_ITEMS.map((item, index) => (
