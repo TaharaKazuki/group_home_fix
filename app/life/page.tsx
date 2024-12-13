@@ -69,7 +69,7 @@ const LifePage = () => {
           Life
           <span className="block text-xs font-normal mt-2">暮らし</span>
         </p>
-        <section className="lg:mt-24 mt-16 flex flex-col gap-[10vw]">
+        <section className="lg:mt-20 mt-16 flex flex-col gap-[10vw]">
           {LIFE_ITEMS.map((item, index) => (
             <LifeItem
               key={index}

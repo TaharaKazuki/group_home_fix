@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import FadeAnimation from '@/components/FadeAnimation';
 import { NavProvider } from '@/providers/NavContext';
 import { Klee_One } from 'next/font/google';
+import { cn } from '@/lib/utils';
 
 const Klee_one = Klee_One({ subsets: ['latin'], weight: ['400', '600'] });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="h-screen">
-      <body className={Klee_one.className}>
+      <body className={cn(Klee_one.className)}>
         <NavProvider>
           <Header />
           <FadeAnimation>{children}</FadeAnimation>

@@ -133,7 +133,7 @@ export const LIFE_ITEMS = [
     imageSrc: '/assets/hero/hero_background_1.png',
   },
   {
-    title: 'MONEY',
+    title: 'MONEY MANAGEMENT',
     description: `お小遣い帳作成のを通して金銭管理のお手伝いも行っております。（希望の方のみ）\n※金銭を直接お預かりする事は行っておりません。`,
     imageSrc: '/assets/hero/hero_background_1.png',
   },
