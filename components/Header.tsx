@@ -18,7 +18,7 @@ const Header = () => {
             size={'lg'}
             className="rounded-full bg-red-300 hidden lg:block text-white shadow-md hover:bg-red-400 transition-all duration-300"
           >
-            お問い合わせはコチラ
+            お問い合わせ
           </Button>
 
           <button

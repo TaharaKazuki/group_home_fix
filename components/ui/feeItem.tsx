@@ -18,14 +18,14 @@ export const FeeItem = ({
   >
     <dt
       className={cn(
-        'flex-shrink lg:w-[12vw] items-center lg:py-8 border-gray-300 lg:border-t border-dotted w-full text-sm lg:text-base'
+        'flex-shrink lg:w-[12vw] items-center lg:py-8 border-red-300 lg:border-t border-dotted w-full text-sm lg:text-base'
       )}
     >
       {title}
     </dt>
     <dd
       className={cn(
-        'w-full items-center lg:py-8 border-gray-300 lg:border-t border-dotted mt-4 lg:mt-0 text-xs lg:text-base'
+        'w-full items-center lg:py-8 border-red-300 lg:border-t border-dotted mt-4 lg:mt-0 text-xs lg:text-base'
       )}
     >
       {description}

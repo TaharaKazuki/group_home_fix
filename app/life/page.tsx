@@ -7,6 +7,7 @@ import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 
 type LifeItemProps = {
   title: string;
+  subTitle: string;
   description: string;
   imageSrc: string;
   isReversed: boolean;
@@ -14,6 +15,7 @@ type LifeItemProps = {
 
 const LifeItem = ({
   title,
+  subTitle,
   description,
   imageSrc,
   isReversed,
@@ -32,6 +34,7 @@ const LifeItem = ({
       <div className={cn('order-2', isReversed && 'lg:order-1')}>
         <h2 className="lg:text-3xl text-lg text-center lg:text-left font-semibold text-red-300">
           {title}
+          <span className="pl-2 inline-block text-base">{subTitle}</span>
         </h2>
         <p className="pt-5 lg:pt-10 lg:leading-10 leading-6 text-center lg:text-left lg:text-base text-sm">
           {formatDesc(description)}
@@ -67,13 +70,14 @@ const LifePage = () => {
         />
         <p className="font-semibold text-2xl">
           暮らし
-          <span className="block text-xs font-normal mt-2">Life</span>
+          <span className="block text-base font-normal mt-2">Life</span>
         </p>
         <section className="lg:mt-20 mt-16 flex flex-col gap-[10vw]">
           {LIFE_ITEMS.map((item, index) => (
             <LifeItem
               key={index}
               title={item.title}
+              subTitle={item.subTitle}
               description={item.description}
               imageSrc={item.imageSrc}
               isReversed={index % 2 !== 0}

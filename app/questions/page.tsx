@@ -5,8 +5,10 @@ const QuestionsPage = () => {
   return (
     <main className="pt-[10vw] container mx-auto">
       <p className="font-semibold text-2xl">
-        よくある質問
-        <span className="block text-xs font-normal mt-2">Questions</span>
+        ご質問について
+        <span className="block text-base font-normal mt-2 text-red-300">
+          Questions
+        </span>
       </p>
       <section className="my-8">
         {FAQ_LIST.map((item, i) => (

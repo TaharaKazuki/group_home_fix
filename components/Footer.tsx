@@ -25,7 +25,9 @@ const Footer = () => {
         <ul className="flex lg:flex-row flex-col text-center lg:gap-9 gap-3 lg:py-16 py-12">
           {LINKS.map((link, i) => (
             <li key={i}>
-              <span className="text-xs">{link.name}</span>
+              <span className="relative underline-offset-4 hover:underline-offset-0 before:content-[''] before:absolute before:left-0 before:bottom-[-4px] before:h-[2px] before:w-0 before:bg-red-300 before:transition-all before:duration-300 hover:before:w-full text-xs">
+                {link.name}
+              </span>
             </li>
           ))}
         </ul>
