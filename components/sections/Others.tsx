@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { LINK } from '@/constant';
 import Link from 'next/link';
 
