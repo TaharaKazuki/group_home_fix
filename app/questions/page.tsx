@@ -1,12 +1,12 @@
-import { FAQ_LIST } from '@/constant';
 import { AccordionItem } from '@/components/ui/accordionItem';
+import { FAQ_LIST } from '@/constant';
 
 const QuestionsPage = () => {
   return (
-    <main className="pt-[10vw] container mx-auto">
-      <p className="font-semibold text-2xl">
+    <main className="container mx-auto pt-[10vw]">
+      <p className="text-2xl font-semibold">
         ご質問について
-        <span className="block text-base font-normal mt-2 text-red-300">
+        <span className="mt-2 block text-base font-normal text-red-300">
           Questions
         </span>
       </p>
