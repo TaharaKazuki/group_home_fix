@@ -4,9 +4,9 @@ import { EQUIPMENT_ITEMS } from '@/constant';
 const EquipmentSection = () => {
   return (
     <section className="pt-[10vw]">
-      <p className="font-semibold text-2xl">
+      <p className="text-2xl font-semibold">
         設備
-        <span className="block text-base font-normal mt-2 text-red-300">
+        <span className="mt-2 block text-base font-normal text-red-300">
           Equipments
         </span>
       </p>
@@ -16,9 +16,9 @@ const EquipmentSection = () => {
             <img
               src={item.imageSrc}
               alt="sample"
-              className="size-full object-cover aspect-3/2"
+              className="aspect-3/2 size-full object-cover"
             />
-            <p className="lg:text-base text-sm text-left mt-2">{item.desc}</p>
+            <p className="mt-2 text-left text-sm lg:text-base">{item.desc}</p>
           </div>
         ))}
       </div>

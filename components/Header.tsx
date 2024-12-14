@@ -1,29 +1,30 @@
 'use client';
 
 import { AnimatePresence } from 'framer-motion';
+
 import Nav from './Nav';
+import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 import { useNav } from '@/providers/NavContext';
-import { Button } from './ui/button';
 
 const Header = () => {
   const { navActive, toggleHandler } = useNav();
 
   return (
-    <header className="fixed inset-x-0 top-[20px] lg:top-[40px] z-[60]">
+    <header className="fixed inset-x-0 top-[20px] z-[60] lg:top-[40px]">
       <div className="container mx-auto">
         <div className="flex items-center justify-end gap-4">
           <Button
             variant={'default'}
             size={'lg'}
-            className="rounded-full bg-red-300 hidden lg:block text-white shadow-md hover:bg-red-400 transition-all duration-300"
+            className="hidden rounded-full bg-red-300 text-white shadow-md transition-all duration-300 hover:bg-red-400 lg:block"
           >
             お問い合わせ
           </Button>
 
           <button
             onClick={toggleHandler}
-            className="relative z-[60] flex h-6 w-8 items-center justify-center text-accent outline-none"
+            className="relative z-[60] flex h-6 w-8 items-center justify-center outline-none"
           >
             <span
               className={cn(

@@ -1,6 +1,7 @@
-import { CAROUSEL_IMAGES } from '@/constant';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+
+import { CAROUSEL_IMAGES } from '@/constant';
 
 const SliderSection = () => {
   const [positionIndexes, setPositionIndexes] = useState<number[]>([
@@ -38,7 +39,7 @@ const SliderSection = () => {
 
   return (
     <section className="relative">
-      <div className="flex items-center flex-col justify-center lg:h-[60vh] h-[45vh]">
+      <div className="flex h-[45vh] flex-col items-center justify-center lg:h-[60vh]">
         {CAROUSEL_IMAGES.map((image, i) => (
           <motion.img
             key={i}
@@ -48,7 +49,7 @@ const SliderSection = () => {
             animate={positions[positionIndexes[i]]}
             variants={imageVariants}
             transition={{ duration: 0.5 }}
-            className="absolute w-[80%] lg:w-[40%]"
+            className="absolute w-4/5 lg:w-2/5"
           />
         ))}
       </div>

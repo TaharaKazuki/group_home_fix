@@ -1,9 +1,10 @@
 'use client';
 
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+
 import { formatDesc } from '@/components/ui/formatDesc';
 import { LIFE_ITEMS } from '@/constant';
 import { cn } from '@/lib/utils';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 
 type LifeItemProps = {
   title: string;
@@ -21,22 +22,22 @@ const LifeItem = ({
   isReversed,
 }: LifeItemProps) => {
   return (
-    <div className="grid w-full gap-[10vw] grid-cols-1 lg:grid-cols-2">
+    <div className="grid w-full grid-cols-1 gap-[10vw] lg:grid-cols-2">
       {/* 画像部分 */}
       <div className={cn('order-1', isReversed && 'lg:order-2')}>
         <img
           src={imageSrc}
           alt={title}
-          className="size-full object-cover aspect-square"
+          className="aspect-square size-full object-cover"
         />
       </div>
       {/* テキスト部分 */}
       <div className={cn('order-2', isReversed && 'lg:order-1')}>
-        <h2 className="lg:text-3xl text-lg text-center lg:text-left font-semibold text-red-300">
+        <h2 className="text-center text-lg font-semibold text-red-300 lg:text-left lg:text-3xl">
           {title}
-          <span className="pl-2 inline-block text-base">{subTitle}</span>
+          <span className="inline-block pl-2 text-base">{subTitle}</span>
         </h2>
-        <p className="pt-5 lg:pt-10 lg:leading-10 leading-6 text-center lg:text-left lg:text-base text-sm">
+        <p className="pt-5 text-center text-sm leading-6 lg:pt-10 lg:text-left lg:text-base lg:leading-10">
           {formatDesc(description)}
         </p>
       </div>
@@ -63,16 +64,16 @@ const LifePage = () => {
 
   return (
     <>
-      <main className="pt-[10vw] container mx-auto">
+      <main className="container mx-auto pt-[10vw]">
         <motion.div
-          className="fixed inset-y-0 left-0 lg:w-[1vw] w-[1.8vw]"
+          className="fixed inset-y-0 left-0 w-[1.8vw] lg:w-[1vw]"
           style={{ scaleY, backgroundColor, transformOrigin: 'top' }}
         />
-        <p className="font-semibold text-2xl">
+        <p className="text-2xl font-semibold">
           暮らし
-          <span className="block text-base font-normal mt-2">Life</span>
+          <span className="mt-2 block text-base font-normal">Life</span>
         </p>
-        <section className="lg:mt-20 mt-16 flex flex-col gap-[10vw]">
+        <section className="mt-16 flex flex-col gap-[10vw] lg:mt-20">
           {LIFE_ITEMS.map((item, index) => (
             <LifeItem
               key={index}
