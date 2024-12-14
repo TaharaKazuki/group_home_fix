@@ -30,7 +30,7 @@ export const FeeItem = ({
     >
       {description}
       {subDescription && (
-        <span className="block text-xs lg:mt-3 mt-1">{subDescription}</span>
+        <span className="mt-1 block text-xs lg:mt-3">{subDescription}</span>
       )}
     </dd>
   </dl>

@@ -19,7 +19,7 @@ const FadeAnimation = ({ children }: FadeAnimationProps) => {
           opacity: 0,
           transition: { delay: 1, duration: 1, ease: 'easeIn' },
         }}
-        className="pointer-events-none fixed top-0 z-50 h-screen w-screen xl:z-50 bg-gradient-to-b from-red-300 to-white flex items-center justify-center"
+        className="pointer-events-none fixed top-0 z-50 flex h-screen w-screen items-center justify-center bg-gradient-to-b from-red-300 to-white xl:z-50"
       >
         Logoいれる
       </motion.div>

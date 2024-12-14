@@ -7,12 +7,12 @@ const EquipmentPage = () => {
   return (
     <main className="container mx-auto">
       <EquipmentSection />
-      <div className="mt-3 lg:mt-0 flex lg:flex-row flex-col justify-center pt-[10vw]">
-        <p className="flex-shrink-0 w-[16vw] font-semibold text-2xl">
+      <div className="mt-3 flex flex-col justify-center pt-[10vw] lg:mt-0 lg:flex-row">
+        <p className="w-[16vw] shrink-0 text-2xl font-semibold">
           Fees
-          <span className="block text-xs font-normal mt-2">料金詳細</span>
+          <span className="mt-2 block text-xs font-normal">料金詳細</span>
         </p>
-        <div className="w-full mt-3 lg:mt-0">
+        <div className="mt-3 w-full lg:mt-0">
           {FEE_ITEMS.map((item, i) => (
             <FeeItem
               key={i}
@@ -24,21 +24,21 @@ const EquipmentPage = () => {
         </div>
       </div>
 
-      <div className="border border-red-300 border-dashed lg:p-10 p-3 rounded-lg mt-6 shadow-md">
-        <p className="lg:text-2xl font-bold">家賃補助の一例</p>
-        <div className="flex flex-row mt-4 gap-5 items-center">
-          <span className="block lg:text-base text-xs">
+      <div className="mt-6 rounded-lg border border-dashed border-red-300 p-3 shadow-md lg:p-10">
+        <p className="font-bold lg:text-2xl">家賃補助の一例</p>
+        <div className="mt-4 flex flex-row items-center gap-5">
+          <span className="block text-xs lg:text-base">
             特定障がい者特別給付費支援対象者
           </span>
-          <span className="block font-semibold text-xs lg:text-base">
+          <span className="block text-xs font-semibold lg:text-base">
             -{formatYen(10000)}円
           </span>
         </div>
-        <div className="flex flex-row mt-4 gap-5">
-          <span className="block lg:text-base text-xs">
+        <div className="mt-4 flex flex-row gap-5">
+          <span className="block text-xs lg:text-base">
             補助を受けた場合の合計負担額
           </span>
-          <span className="block font-semibold text-xs lg:text-base">
+          <span className="block text-xs font-semibold lg:text-base">
             {`${formatYen(67500)}円〜${formatYen(71500)}円`}
           </span>
         </div>
