@@ -23,7 +23,7 @@ const Nav = () => {
       initial="initial"
       animate="open"
       exit="close"
-      className="absolute -top-[40px] z-50 w-full overflow-hidden bg-blue-300"
+      className="absolute top-[-40px] z-50 w-full overflow-hidden bg-blue-300"
     >
       <div className="container mx-auto flex h-full items-center justify-center">
         <NavList />

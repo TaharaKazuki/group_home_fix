@@ -1,11 +1,12 @@
-import type { Metadata } from 'next';
 import './globals.css';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import FadeAnimation from '@/components/FadeAnimation';
-import { NavProvider } from '@/providers/NavContext';
+import type { Metadata } from 'next';
 import { Fira_Sans } from 'next/font/google';
+
+import FadeAnimation from '@/components/FadeAnimation';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import { cn } from '@/lib/utils';
+import { NavProvider } from '@/providers/NavContext';
 
 const fira_sans = Fira_Sans({
   subsets: ['latin'],

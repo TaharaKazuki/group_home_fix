@@ -1,10 +1,11 @@
 'use client';
 
-import Link from 'next/link';
-import { LINKS } from '@/constant';
 import { motion } from 'framer-motion';
-import { useNav } from '@/providers/NavContext';
+import Link from 'next/link';
 import { useEffect } from 'react';
+
+import { LINKS } from '@/constant';
+import { useNav } from '@/providers/NavContext';
 
 const letterAnim = {
   initial: {
@@ -57,13 +58,13 @@ const Nav = () => {
   }, [navActive]);
 
   return (
-    <ul className="flex flex-col items-center gap-8 font-primary text-4xl font-semibold">
+    <ul className="flex flex-col items-center gap-8 text-4xl font-semibold">
       {LINKS.map((link, index) => (
         <li key={index} className="flex flex-row">
           <Link
             href={link.href}
             key={index}
-            className="flex items-baseline overflow-hidden transition-all text-base lg:text-lg"
+            className="flex items-baseline overflow-hidden text-base transition-all lg:text-lg"
             onClick={toggleHandler}
           >
             {getLetter(link.name)}
