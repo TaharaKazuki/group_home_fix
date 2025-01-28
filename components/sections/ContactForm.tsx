@@ -4,21 +4,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
-import { z } from 'zod';
 
-const contactSchema = z.object({
-  name: z.string().min(1, 'お名前を入力してください'),
-  email: z.string().email('正しいメールアドレスを入力してください'),
-  type: z.enum(['入居について', '採用について'], {
-    required_error: 'お問い合わせ種類を選択してください',
-  }),
-  message: z
-    .string()
-    .min(10, 'メッセージは10文字以上入力してください')
-    .max(1000, 'メッセージは1000文字以内で入力してください'),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+import { ContactFormData, contactSchema } from '@/schemas/contact';
 
 const ContactForm = () => {
   const {
@@ -42,7 +29,7 @@ const ContactForm = () => {
       className="mx-auto w-full max-w-4xl p-6"
     >
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-        <div>
+        <div className="min-h-[110px]">
           <label
             htmlFor="name"
             className="block text-base font-medium text-gray-700"
@@ -63,7 +50,7 @@ const ContactForm = () => {
           )}
         </div>
 
-        <div>
+        <div className="min-h-[110px]">
           <label
             htmlFor="email"
             className="block text-base font-medium text-gray-700"
@@ -84,7 +71,7 @@ const ContactForm = () => {
           )}
         </div>
 
-        <div className="relative">
+        <div className="relative min-h-[110px]">
           <label
             htmlFor="type"
             className="block text-base font-medium text-gray-700"
@@ -94,11 +81,14 @@ const ContactForm = () => {
           <select
             id="type"
             {...register('type')}
-            className={`mt-2 block w-full appearance-none rounded-md border-2 border-gray-200 p-3 pr-10 text-base shadow-sm focus:border-red-300 focus:outline-none focus:ring-1 focus:ring-red-300 focus:ring-offset-0 ${
+            defaultValue=""
+            className={`mt-2 block w-full appearance-none rounded-md border-2 border-gray-200 p-3 pr-10 text-base shadow-sm placeholder:text-gray-400 focus:border-red-300 focus:outline-none focus:ring-1 focus:ring-red-300 focus:ring-offset-0 ${
               errors.type ? 'border-red-500' : ''
             }`}
           >
-            <option value="">選択してください</option>
+            <option value="" disabled hidden>
+              選択してください
+            </option>
             <option value="入居について">入居について</option>
             <option value="採用について">採用について</option>
           </select>
@@ -110,7 +100,7 @@ const ContactForm = () => {
           )}
         </div>
 
-        <div>
+        <div className="min-h-[110px]">
           <label
             htmlFor="message"
             className="block text-base font-medium text-gray-700"
