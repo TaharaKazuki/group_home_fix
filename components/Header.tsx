@@ -2,6 +2,7 @@
 
 import { AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import Nav from './Nav';
 import { Button } from './ui/button';
@@ -10,20 +11,23 @@ import { useNav } from '@/providers/NavContext';
 
 const Header = () => {
   const { navActive, toggleHandler } = useNav();
+  const pathname = usePathname();
 
   return (
     <header className="fixed inset-x-0 top-[20px] z-[60] lg:top-[40px]">
       <div className="container mx-auto">
         <div className="flex items-center justify-end gap-4">
-          <Link href="/contact">
-            <Button
-              variant={'default'}
-              size={'lg'}
-              className="hidden rounded-full bg-red-300 text-white shadow-md transition-all duration-300 hover:bg-red-400 lg:block"
-            >
-              お問い合わせ
-            </Button>
-          </Link>
+          {pathname !== '/contact' && (
+            <Link href="/contact">
+              <Button
+                variant={'default'}
+                size={'lg'}
+                className="hidden rounded-full bg-red-300 text-white shadow-md transition-all duration-300 hover:bg-red-400 lg:block"
+              >
+                お問い合わせ
+              </Button>
+            </Link>
+          )}
 
           <button
             onClick={toggleHandler}
