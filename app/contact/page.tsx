@@ -1,12 +1,15 @@
-import React from 'react';
+import ContactForm from '@/components/sections/ContactForm';
 
-const ContactPage = () => {
+export default function Contact() {
   return (
-    <div>
-      page
-      <div className="h-[2000px]" />
-    </div>
+    <main className="min-h-screen px-4 py-24">
+      <div className="mx-auto max-w-4xl">
+        <h1 className="mb-8 text-center text-3xl font-bold">お問い合わせ</h1>
+        <p className="mb-12 text-center text-gray-600">
+          ご質問やご相談がございましたら、下記フォームよりお気軽にお問い合わせください。
+        </p>
+        <ContactForm />
+      </div>
+    </main>
   );
-};
-
-export default ContactPage;
+}
