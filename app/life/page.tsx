@@ -33,9 +33,11 @@ const LifeItem = ({
       </div>
       {/* テキスト部分 */}
       <div className={cn('order-2', isReversed && 'lg:order-1')}>
-        <h2 className="text-center text-lg font-semibold text-red-300 lg:text-left lg:text-3xl">
+        <h2 className="text-center text-lg font-semibold lg:text-left lg:text-3xl">
           {title}
-          <span className="inline-block pl-2 text-base">{subTitle}</span>
+          <span className="inline-block pl-2 text-base text-red-300">
+            {subTitle}
+          </span>
         </h2>
         <p className="pt-5 text-center text-sm leading-6 lg:pt-10 lg:text-left lg:text-base lg:leading-10">
           {formatDesc(description)}
@@ -66,12 +68,14 @@ const LifePage = () => {
     <>
       <main className="container mx-auto pt-[10vw]">
         <motion.div
-          className="fixed inset-y-0 left-0 w-[1.8vw] lg:w-[1vw]"
+          className="fixed inset-y-0 left-0 w-[2vw] lg:w-[1.2vw]"
           style={{ scaleY, backgroundColor, transformOrigin: 'top' }}
         />
         <p className="text-2xl font-semibold">
           暮らし
-          <span className="mt-2 block text-base font-normal">Life</span>
+          <span className="mt-2 block text-base font-normal text-red-300">
+            Life
+          </span>
         </p>
         <section className="mt-16 flex flex-col gap-[10vw] lg:mt-20">
           {LIFE_ITEMS.map((item, index) => (
