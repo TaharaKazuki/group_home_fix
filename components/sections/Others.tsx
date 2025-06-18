@@ -14,7 +14,9 @@ const OthersSection = () => {
           <div className="mt-6 flex flex-col justify-center gap-10">
             <h2 className="text-center text-lg font-semibold lg:text-2xl">
               料金・設備
-              <span className="block text-sm font-normal">Fees/Facilities</span>
+              <span className="block text-sm font-normal text-red-300">
+                Fees/Facilities
+              </span>
             </h2>
             <div>
               <p className="text-center text-sm leading-8">
@@ -39,7 +41,9 @@ const OthersSection = () => {
           <div className="mt-6 flex flex-col justify-center gap-10">
             <h2 className="text-center text-lg font-semibold lg:text-2xl">
               ご質問について
-              <span className="block text-sm font-normal">Questions</span>
+              <span className="block text-sm font-normal text-red-300">
+                Questions
+              </span>
             </h2>
             <div>
               <p className="text-center text-sm leading-8">

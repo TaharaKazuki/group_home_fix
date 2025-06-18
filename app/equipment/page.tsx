@@ -9,8 +9,10 @@ const EquipmentPage = () => {
       <EquipmentSection />
       <div className="mt-3 flex flex-col justify-center pt-[10vw] lg:mt-0 lg:flex-row">
         <p className="w-[16vw] shrink-0 text-2xl font-semibold">
-          Fees
-          <span className="mt-2 block text-xs font-normal">料金詳細</span>
+          料金詳細
+          <span className="mt-2 block text-xs font-normal text-red-300">
+            Fees
+          </span>
         </p>
         <div className="mt-3 w-full lg:mt-0">
           {FEE_ITEMS.map((item, i) => (

@@ -14,7 +14,9 @@ const LifeSection = () => {
           <div className="mt-6 flex flex-col justify-between gap-[10vw] lg:flex-row">
             <h2 className="text-left text-lg font-semibold lg:text-left lg:text-2xl">
               暮らし
-              <span className="block text-sm font-normal">Life</span>
+              <span className="block text-sm font-normal text-red-300">
+                Life
+              </span>
             </h2>
             <div>
               <p className="text-sm leading-6 lg:text-left lg:text-sm lg:leading-10">
