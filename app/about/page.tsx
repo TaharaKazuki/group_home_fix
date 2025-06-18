@@ -6,7 +6,7 @@ import { ABOUT_SECTION_DESC } from '@/constant';
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen px-4 py-24">
+    <section className="min-h-screen px-4 py-24 pt-[15vw]">
       <div className="mx-auto max-w-7xl">
         <p className="text-2xl font-semibold">
           私たちについて
@@ -15,8 +15,8 @@ export default function AboutPage() {
           </span>
         </p>
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="relative aspect-square w-full overflow-hidden bg-gray-100">
+        <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-gray-100">
             <Image
               src="/assets/hero/hero_background_1.png"
               alt="施設の外観"
@@ -32,38 +32,52 @@ export default function AboutPage() {
               </p>
 
               <div className="space-y-6">
-                <div className="bg-gray-50 p-6">
-                  <h2 className="text-lg font-semibold">施設概要</h2>
+                <div className="rounded-lg border border-dashed border-red-300 p-3 shadow-md lg:p-6">
+                  <h2 className="font-bold lg:text-lg">施設概要</h2>
                   <dl className="mt-4 space-y-2">
                     <div className="flex gap-4">
-                      <dt className="w-20 font-medium">設立</dt>
-                      <dd>2020年4月</dd>
+                      <dt className="w-20 text-xs font-medium lg:text-base">
+                        設立
+                      </dt>
+                      <dd className="text-xs font-semibold lg:text-base">
+                        2020年4月
+                      </dd>
                     </div>
                     <div className="flex gap-4">
-                      <dt className="w-20 font-medium">定員</dt>
-                      <dd>20名</dd>
+                      <dt className="w-20 text-xs font-medium lg:text-base">
+                        定員
+                      </dt>
+                      <dd className="text-xs font-semibold lg:text-base">
+                        20名
+                      </dd>
                     </div>
                     <div className="flex gap-4">
-                      <dt className="w-20 font-medium">職員数</dt>
-                      <dd>15名</dd>
+                      <dt className="w-20 text-xs font-medium lg:text-base">
+                        職員数
+                      </dt>
+                      <dd className="text-xs font-semibold lg:text-base">
+                        15名
+                      </dd>
                     </div>
                   </dl>
                 </div>
 
-                <div className="bg-gray-50 p-6">
-                  <h2 className="text-lg font-semibold">所在地・アクセス</h2>
+                <div className="rounded-lg border border-dashed border-red-300 p-3 shadow-md lg:p-6">
+                  <h2 className="font-bold lg:text-lg">所在地・アクセス</h2>
                   <dl className="mt-4 space-y-4">
                     <div>
-                      <dt className="font-medium">住所</dt>
-                      <dd className="mt-1">
+                      <dt className="text-xs font-medium lg:text-base">住所</dt>
+                      <dd className="mt-1 text-xs font-semibold lg:text-base">
                         〒000-0000
                         <br />
                         埼玉県草加市〇〇1-1-1
                       </dd>
                     </div>
                     <div>
-                      <dt className="font-medium">アクセス</dt>
-                      <dd className="mt-1">
+                      <dt className="text-xs font-medium lg:text-base">
+                        アクセス
+                      </dt>
+                      <dd className="mt-1 text-xs font-semibold lg:text-base">
                         〇〇線 〇〇駅から徒歩5分
                         <br />
                         バス停「〇〇」から徒歩1分
@@ -76,6 +90,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 }
