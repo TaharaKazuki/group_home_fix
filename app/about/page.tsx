@@ -6,7 +6,7 @@ import { ABOUT_SECTION_DESC } from '@/constant';
 
 export default function AboutPage() {
   return (
-    <section className="min-h-screen px-4 py-24 pt-[15vw]">
+    <section className="mt-[15vh] px-4">
       <div className="mx-auto max-w-7xl">
         <p className="text-2xl font-semibold">
           私たちについて
