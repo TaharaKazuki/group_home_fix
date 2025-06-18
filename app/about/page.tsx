@@ -58,7 +58,7 @@ export default function AboutPage() {
                       <dd className="mt-1">
                         〒000-0000
                         <br />
-                        東京都〇〇区〇〇1-1-1
+                        埼玉県草加市〇〇1-1-1
                       </dd>
                     </div>
                     <div>

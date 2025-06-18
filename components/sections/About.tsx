@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
-
+import { DetailLink } from '../ui/DetailLink';
 import { formatDesc } from '../ui/formatDesc';
 import { ABOUT_SECTION_DESC, LINK } from '@/constant';
 
@@ -17,12 +16,7 @@ const AboutSection = () => {
               {formatDesc(ABOUT_SECTION_DESC)}
             </p>
             <p className="mt-6 text-center lg:text-left">
-              <Link
-                href={LINK.ABOUT}
-                className="relative underline-offset-4 before:absolute before:bottom-[-4px] before:left-0 before:h-[2px] before:w-0 before:bg-red-300 before:transition-all before:duration-300 before:content-[''] hover:underline-offset-0 hover:before:w-full"
-              >
-                <span className="text-base">詳しくはこちら</span>
-              </Link>
+              <DetailLink href={LINK.ABOUT}>詳しくはこちら</DetailLink>
             </p>
           </div>
           <img
