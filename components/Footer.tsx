@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 import { LINKS } from '@/constant';
@@ -25,9 +26,11 @@ const Footer = () => {
         <ul className="flex flex-col gap-3 py-12 text-center lg:flex-row lg:gap-9 lg:py-16">
           {LINKS.map((link, i) => (
             <li key={i}>
-              <span className="relative cursor-pointer text-xs underline-offset-4 before:absolute before:bottom-[-4px] before:left-0 before:h-[2px] before:w-0 before:bg-red-300 before:transition-all before:duration-300 before:content-[''] hover:underline-offset-0 hover:before:w-full">
-                {link.name}
-              </span>
+              <Link href={link.href}>
+                <span className="relative cursor-pointer text-xs underline-offset-4 before:absolute before:bottom-[-4px] before:left-0 before:h-[2px] before:w-0 before:bg-red-300 before:transition-all before:duration-300 before:content-[''] hover:underline-offset-0 hover:before:w-full">
+                  {link.name}
+                </span>
+              </Link>
             </li>
           ))}
         </ul>
