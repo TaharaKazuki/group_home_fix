@@ -12,7 +12,7 @@ const AboutSection = () => {
             <h2 className="text-center text-lg font-semibold lg:text-left lg:text-2xl">
               私たちについて
             </h2>
-            <span className="block text-sm font-normal text-red-300">
+            <span className="block text-center text-sm font-normal text-red-300 lg:text-left">
               About us
             </span>
             <p className="pt-10 text-center text-sm leading-6 lg:text-left lg:text-base lg:leading-10">

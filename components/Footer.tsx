@@ -27,7 +27,7 @@ const Footer = () => {
           {LINKS.map((link, i) => (
             <li key={i}>
               <Link href={link.href}>
-                <span className="relative cursor-pointer text-xs underline-offset-4 before:absolute before:bottom-[-4px] before:left-0 before:h-[2px] before:w-0 before:bg-red-300 before:transition-all before:duration-300 before:content-[''] hover:underline-offset-0 hover:before:w-full">
+                <span className="relative cursor-pointer text-xs underline-offset-4 before:absolute before:bottom-[-4px] before:left-0 before:h-[2px] before:w-0 before:bg-red-300 before:content-[''] lg:transition-colors lg:duration-300 lg:before:transition-all lg:before:duration-300 lg:hover:text-red-300 lg:hover:underline-offset-0 lg:hover:before:w-full">
                   {link.name}
                 </span>
               </Link>
