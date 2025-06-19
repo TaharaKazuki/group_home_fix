@@ -6,7 +6,7 @@ import { ABOUT_SECTION_DESC } from '@/constant';
 
 export default function AboutPage() {
   return (
-    <section className="mt-[15vh] px-4">
+    <section className="container mt-[15vh] px-4">
       <div className="mx-auto max-w-7xl">
         <p className="text-2xl font-semibold">
           私たちについて
@@ -33,41 +33,35 @@ export default function AboutPage() {
 
               <div className="space-y-6">
                 <div className="rounded-lg border border-dashed border-red-300 p-3 shadow-md lg:p-6">
-                  <h2 className="font-bold lg:text-lg">施設概要</h2>
+                  <h2 className="lg:text-lg">施設概要</h2>
                   <dl className="mt-4 space-y-2">
                     <div className="flex gap-4">
                       <dt className="w-20 text-xs font-medium lg:text-base">
                         設立
                       </dt>
-                      <dd className="text-xs font-semibold lg:text-base">
-                        2020年4月
-                      </dd>
+                      <dd className="text-xs lg:text-base">2020年4月</dd>
                     </div>
                     <div className="flex gap-4">
                       <dt className="w-20 text-xs font-medium lg:text-base">
                         定員
                       </dt>
-                      <dd className="text-xs font-semibold lg:text-base">
-                        20名
-                      </dd>
+                      <dd className="text-xs lg:text-base">20名</dd>
                     </div>
                     <div className="flex gap-4">
                       <dt className="w-20 text-xs font-medium lg:text-base">
                         職員数
                       </dt>
-                      <dd className="text-xs font-semibold lg:text-base">
-                        15名
-                      </dd>
+                      <dd className="text-xs lg:text-base">15名</dd>
                     </div>
                   </dl>
                 </div>
 
                 <div className="rounded-lg border border-dashed border-red-300 p-3 shadow-md lg:p-6">
-                  <h2 className="font-bold lg:text-lg">所在地・アクセス</h2>
+                  <h2 className="lg:text-lg">所在地・アクセス</h2>
                   <dl className="mt-4 space-y-4">
                     <div>
                       <dt className="text-xs font-medium lg:text-base">住所</dt>
-                      <dd className="mt-1 text-xs font-semibold lg:text-base">
+                      <dd className="mt-1 text-xs lg:text-base">
                         〒000-0000
                         <br />
                         埼玉県草加市〇〇1-1-1
@@ -77,7 +71,7 @@ export default function AboutPage() {
                       <dt className="text-xs font-medium lg:text-base">
                         アクセス
                       </dt>
-                      <dd className="mt-1 text-xs font-semibold lg:text-base">
+                      <dd className="mt-1 text-xs lg:text-base">
                         〇〇線 〇〇駅から徒歩5分
                         <br />
                         バス停「〇〇」から徒歩1分
