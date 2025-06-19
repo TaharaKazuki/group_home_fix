@@ -2,7 +2,9 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-import { type ReactNode } from 'react';
+import { type ReactNode, useEffect } from 'react';
+
+import { useNav } from '@/providers/NavContext';
 
 type FadeAnimationProps = {
   children: ReactNode;
@@ -10,6 +12,16 @@ type FadeAnimationProps = {
 
 const FadeAnimation = ({ children }: FadeAnimationProps) => {
   const pathname = usePathname();
+  const { setFadeAnimationActive } = useNav();
+
+  useEffect(() => {
+    setFadeAnimationActive(true);
+    const timer = setTimeout(() => {
+      setFadeAnimationActive(false);
+    }, 2500); // 1.5秒delay + 1秒duration
+
+    return () => clearTimeout(timer);
+  }, [pathname, setFadeAnimationActive]);
   return (
     <AnimatePresence>
       <motion.div
@@ -17,9 +29,9 @@ const FadeAnimation = ({ children }: FadeAnimationProps) => {
         initial={{ opacity: 1 }}
         animate={{
           opacity: 0,
-          transition: { delay: 1, duration: 1, ease: 'easeIn' },
+          transition: { delay: 1.5, duration: 1, ease: 'easeIn' },
         }}
-        className="pointer-events-none fixed top-0 z-50 flex h-screen w-screen items-center justify-center bg-gradient-to-b from-red-300 to-white xl:z-50"
+        className="pointer-events-none fixed top-0 z-40 flex h-screen w-screen items-center justify-center bg-gradient-to-b from-red-300 to-white"
       >
         Logoいれる
       </motion.div>

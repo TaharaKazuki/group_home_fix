@@ -1,30 +1,42 @@
 'use client';
 
-import {
-  createContext,
-  ReactNode,
-  useCallback,
-  useContext,
-  useState,
-} from 'react';
+import { createContext, ReactNode, useContext, useState } from 'react';
 
-const NavContext = createContext({
-  navActive: false,
-  toggleHandler: () => {},
-});
+type NavContextType = {
+  navActive: boolean;
+  toggleHandler: () => void;
+  fadeAnimationActive: boolean;
+  setFadeAnimationActive: (active: boolean) => void;
+};
 
-export const useNav = () => useContext(NavContext);
+const NavContext = createContext<NavContextType | undefined>(undefined);
 
 export const NavProvider = ({ children }: { children: ReactNode }) => {
-  const [navActive, setNavActive] = useState<boolean>(false);
+  const [navActive, setNavActive] = useState(false);
+  const [fadeAnimationActive, setFadeAnimationActive] = useState(false);
 
-  const toggleHandler = useCallback(() => {
-    setNavActive((prev) => !prev);
-  }, []);
+  const toggleHandler = () => {
+    setNavActive(!navActive);
+  };
 
   return (
-    <NavContext.Provider value={{ navActive, toggleHandler }}>
+    <NavContext.Provider
+      value={{
+        navActive,
+        toggleHandler,
+        fadeAnimationActive,
+        setFadeAnimationActive,
+      }}
+    >
       {children}
     </NavContext.Provider>
   );
+};
+
+export const useNav = () => {
+  const context = useContext(NavContext);
+  if (context === undefined) {
+    throw new Error('useNav must be used within a NavProvider');
+  }
+  return context;
 };

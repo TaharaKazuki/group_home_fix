@@ -11,14 +11,19 @@ import { cn } from '@/lib/utils';
 import { useNav } from '@/providers/NavContext';
 
 const Header = () => {
-  const { navActive, toggleHandler } = useNav();
+  const { navActive, toggleHandler, fadeAnimationActive } = useNav();
   const pathname = usePathname();
   const isContactPage = pathname.includes(LINK.CONTACT);
 
   return (
     <header className="fixed inset-x-0 top-[20px] z-[60] lg:top-[40px]">
       <div className="container mx-auto">
-        <div className="flex items-center justify-end gap-4">
+        <div
+          className={cn(
+            'flex items-center justify-end gap-4 transition-opacity duration-300',
+            fadeAnimationActive && 'opacity-0'
+          )}
+        >
           {!isContactPage && (
             <Link href={LINK.CONTACT}>
               <Button
