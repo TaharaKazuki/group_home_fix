@@ -5,9 +5,11 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
 
+import { useSendMail } from '@/hooks/useSendMail';
 import { ContactFormData, contactSchema } from '@/schemas/contact';
 
 const ContactForm = () => {
+  const { sendMail } = useSendMail();
   const {
     register,
     handleSubmit,
@@ -17,8 +19,7 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    console.log(data);
-    // ここにAPI送信処理を実装
+    await sendMail(data);
   };
 
   return (
