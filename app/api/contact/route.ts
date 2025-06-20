@@ -1,8 +1,9 @@
+import { render } from '@react-email/render';
 import { NextResponse, NextRequest } from 'next/server';
 import { createTransport } from 'nodemailer';
 
-import { ContactFormData } from '@/schemas/contact'
-
+import ContactEmail from '@/emails/ContactEmail';
+import { ContactFormData } from '@/schemas/contact';
 
 export const POST = async (req: NextRequest) => {
   try {
@@ -19,22 +20,23 @@ export const POST = async (req: NextRequest) => {
     const { name, email, type, message } =
       (await req.json()) as ContactFormData;
 
-    const details = `
-      名前: ${name}
-
-      Email: ${email}
-
-      お問い合わせ種別: ${type}
-
-      お問い合わせ詳細
-      ${message}
-    `;
+    // React-Emailテンプレートを使用してHTMLとテキストを生成
+    const emailHtml = await render(
+      ContactEmail({ name, email, type, message })
+    );
+    const emailText = await render(
+      ContactEmail({ name, email, type, message }),
+      {
+        plainText: true,
+      }
+    );
 
     await transporter.sendMail({
       from: process.env.MAIL_FROM,
       to: process.env.MAIL_TO,
       subject: 'Portfolioからのお問い合わせ',
-      text: details,
+      html: emailHtml,
+      text: emailText,
     });
 
     return NextResponse.json({ message: 'Success!', status: 200 });
