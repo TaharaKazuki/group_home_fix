@@ -2,6 +2,7 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRef, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
@@ -12,6 +13,7 @@ import { ContactFormData, contactSchema } from '@/schemas/contact';
 
 const ContactForm = () => {
   const { sendMail, isLoading, isSuccess, error, resetState } = useSendMail();
+  const formRef = useRef<HTMLDivElement>(null);
   const {
     register,
     handleSubmit,
@@ -26,6 +28,16 @@ const ContactForm = () => {
     reset();
   };
 
+  // 送信完了またはエラー時にスクロール
+  useEffect(() => {
+    if (isSuccess || error) {
+      formRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }, [isSuccess, error]);
+
   const handleReset = () => {
     resetState();
     reset();
@@ -33,6 +45,7 @@ const ContactForm = () => {
 
   return (
     <motion.div
+      ref={formRef}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
