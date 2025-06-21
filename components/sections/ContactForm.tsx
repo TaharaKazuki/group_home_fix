@@ -22,12 +22,8 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    try {
-      await sendMail(data);
-      reset(); // フォームをリセット
-    } catch (error) {
-      // エラーはuseSendMailで処理済み
-    }
+    await sendMail(data);
+    reset();
   };
 
   const handleReset = () => {
@@ -49,7 +45,7 @@ const ContactForm = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
           >
             <div className="rounded-lg bg-white p-8 shadow-xl">
               <div className="flex flex-col items-center space-y-4">
