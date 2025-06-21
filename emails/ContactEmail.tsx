@@ -39,13 +39,13 @@ export const ContactEmail: React.FC<ContactEmailProps> = ({
           fontStyle="normal"
         />
       </Head>
-      <Preview>Portfolioからのお問い合わせがありました</Preview>
+      <Preview>IXIA Group Homeからのお問い合わせがありました</Preview>
       <Body style={main}>
         <Container style={container}>
           <Section style={section}>
             <Heading style={h1}>お問い合わせ</Heading>
             <Text style={text}>
-              Portfolioサイトからお問い合わせがありました。
+              IXIA Group Homeサイトからお問い合わせがありました。
             </Text>
 
             <Hr style={hr} />

@@ -34,7 +34,7 @@ export const POST = async (req: NextRequest) => {
     await transporter.sendMail({
       from: process.env.MAIL_FROM,
       to: process.env.MAIL_TO,
-      subject: 'Portfolioからのお問い合わせ',
+      subject: 'IXIA Group Homeからのお問い合わせ',
       html: emailHtml,
       text: emailText,
     });
