@@ -19,9 +19,6 @@ const config: Config = {
       xl: '1430px',
     },
     extend: {
-      backgroundImage: {
-        hero_image: 'url(/assets/hero/hero_background_2.png)',
-      },
       aspectRatio: {
         '5/4': '5 / 4',
         '3/2': '3 / 2',
