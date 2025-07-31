@@ -14,7 +14,7 @@ const Footer = () => {
           width={200}
           height={100}
           priority
-          className="object-contain"
+          className="h-16 w-32 object-contain md:h-[100px] md:w-[200px]"
         />
         {/* address */}
         <div className="mt-5 flex flex-col items-center text-xs">
