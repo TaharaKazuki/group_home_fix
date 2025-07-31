@@ -1,6 +1,7 @@
 'use client';
 
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { type ReactNode, useEffect } from 'react';
 
@@ -31,9 +32,16 @@ const FadeAnimation = ({ children }: FadeAnimationProps) => {
           opacity: 0,
           transition: { delay: 1.5, duration: 1, ease: 'easeIn' },
         }}
-        className="pointer-events-none fixed top-0 z-40 flex h-screen w-screen items-center justify-center bg-gradient-to-b from-red-300 to-white"
+        className="pointer-events-none fixed top-0 z-40 flex h-screen w-screen items-center justify-center bg-gradient-to-b from-red-200 to-white"
       >
-        Logoいれる
+        <Image
+          src="/assets/hero/logo.svg"
+          alt="Logo"
+          width={800}
+          height={800}
+          priority
+          className="object-contain"
+        />
       </motion.div>
       {children}
     </AnimatePresence>

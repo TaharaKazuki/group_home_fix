@@ -9,8 +9,8 @@ const HeroSection = () => {
           <Image
             src="/assets/hero/logo.svg"
             alt="Logo"
-            width={600}
-            height={600}
+            width={800}
+            height={800}
             priority
             className="object-contain"
           />
