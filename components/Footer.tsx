@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
@@ -7,9 +8,16 @@ const Footer = () => {
   return (
     <footer className="flex flex-row items-center justify-center py-14 ">
       <div className="flex flex-col items-center justify-center">
-        <div className="h-28 w-48 bg-red-300" />
+        <Image
+          src="/assets/footer/footer_logo.svg"
+          alt="Logo"
+          width={200}
+          height={100}
+          priority
+          className="object-contain"
+        />
         {/* address */}
-        <div className="mt-10 flex flex-col items-center text-xs">
+        <div className="mt-5 flex flex-col items-center text-xs">
           <p>〒123-1234 埼玉県草加市〇〇〇〇〇〇-1234567</p>
           <p>Tel. 090-0000-0000</p>
         </div>
