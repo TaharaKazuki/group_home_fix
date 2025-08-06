@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
+
 import { EQUIPMENT_ITEMS } from '@/constant';
 
 const EquipmentSection = () => {
@@ -13,8 +15,10 @@ const EquipmentSection = () => {
       <div className="mt-6 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
         {EQUIPMENT_ITEMS.map((item, i) => (
           <div key={i}>
-            <img
+            <Image
               src={item.imageSrc}
+              width={425}
+              height={315}
               alt="sample"
               className="aspect-3/2 size-full object-cover"
             />

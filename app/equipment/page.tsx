@@ -8,7 +8,7 @@ const EquipmentPage = () => {
     <main className="container mx-auto">
       <EquipmentSection />
       <div className="mt-3 flex flex-col justify-center pt-[10vw] lg:mt-0 lg:flex-row">
-        <p className="w-[16vw] shrink-0 text-2xl font-semibold">
+        <p className="w-auto shrink-0 text-2xl font-semibold md:w-[16vw]">
           料金詳細
           <span className="mt-2 block text-xs font-normal text-red-300">
             Fees
