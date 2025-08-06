@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import Image from 'next/image';
 
 import { formatDesc } from '@/components/ui/formatDesc';
 import { LIFE_ITEMS } from '@/constant';
@@ -25,9 +26,11 @@ const LifeItem = ({
     <div className="grid w-full grid-cols-1 gap-[10vw] lg:grid-cols-2">
       {/* 画像部分 */}
       <div className={cn('order-1', isReversed && 'lg:order-2')}>
-        <img
+        <Image
           src={imageSrc}
           alt={title}
+          width={400}
+          height={400}
           className="aspect-square size-full object-cover"
         />
       </div>
