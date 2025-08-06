@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { DetailLink } from '../ui/DetailLink';
 import { LINK } from '@/constant';
 
@@ -6,9 +8,11 @@ const LifeSection = () => {
     <section className="pt-[10vw]">
       <div className="container relative mx-auto flex h-full flex-col items-center xl:flex-row">
         <div>
-          <img
-            src="/assets/hero/hero_background_1.png"
+          <Image
+            src="/assets/life.png"
             alt="sample"
+            width={930}
+            height={520}
             className="aspect-video size-full object-cover"
           />
           <div className="mt-6 flex flex-col justify-between gap-[10vw] lg:flex-row">

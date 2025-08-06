@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { DetailLink } from '../ui/DetailLink';
 import { LINK } from '@/constant';
 
@@ -6,9 +8,11 @@ const OthersSection = () => {
     <section className="pt-[10vw]">
       <div className="container relative mx-auto flex h-full flex-col items-center gap-10 lg:flex-row lg:gap-32">
         <div>
-          <img
-            src="/assets/hero/hero_background_1.png"
+          <Image
+            src="/assets/fees_facilities.png"
             alt="sample"
+            width={400}
+            height={320}
             className="aspect-5/4 size-full object-cover"
           />
           <div className="mt-6 flex flex-col justify-center gap-10">
@@ -33,9 +37,11 @@ const OthersSection = () => {
           </div>
         </div>
         <div>
-          <img
-            src="/assets/hero/hero_background_1.png"
+          <Image
+            src="/assets/questions.png"
             alt="sample"
+            width={400}
+            height={320}
             className="aspect-5/4 size-full object-cover"
           />
           <div className="mt-6 flex flex-col justify-center gap-10">

@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
+
 import { DetailLink } from '../ui/DetailLink';
 import { formatDesc } from '../ui/formatDesc';
 import { ABOUT_SECTION_DESC, LINK } from '@/constant';
@@ -22,9 +24,11 @@ const AboutSection = () => {
               <DetailLink href={LINK.ABOUT}>詳しくはこちら</DetailLink>
             </p>
           </div>
-          <img
-            src="/assets/hero/hero_background_1.png"
+          <Image
+            src="/assets/about_us.png"
             alt="sample"
+            width={400}
+            height={400}
             className="aspect-square size-full object-cover"
           />
         </div>
