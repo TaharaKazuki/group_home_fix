@@ -14,8 +14,57 @@ const noto_sans_jp = M_PLUS_Rounded_1c({
 });
 
 export const metadata: Metadata = {
-  title: 'IXIA Group Home',
-  description: 'IXIA Group Homeのホームページ',
+  title: {
+    default: 'IXIA Group Home - 安心・安全な共同生活住居',
+    template: '%s | IXIA Group Home',
+  },
+  description:
+    '埼玉県草加市にあるグループホーム「IXIA」では、障がいをお持ちの方が安心して暮らせる共同生活住居を提供しています。24時間サポート体制で、一人ひとりの個性を大切にしたケアを行っております。',
+  keywords: [
+    'グループホーム',
+    'IXIA',
+    '草加市',
+    '埼玉県',
+    '障がい者支援',
+    '共同生活住居',
+    '福祉',
+    '介護',
+  ],
+  authors: [{ name: 'IXIA Group Home' }],
+  creator: 'IXIA Group Home',
+  publisher: 'IXIA Group Home',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://ixia-group-home.com'),
+  openGraph: {
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://ixia-group-home.com',
+    title: 'IXIA Group Home - 安心・安全な共同生活住居',
+    description:
+      '埼玉県草加市にあるグループホーム「IXIA」では、障がいをお持ちの方が安心して暮らせる共同生活住居を提供しています。',
+    siteName: 'IXIA Group Home',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IXIA Group Home - 安心・安全な共同生活住居',
+    description:
+      '埼玉県草加市にあるグループホーム「IXIA」では、障がいをお持ちの方が安心して暮らせる共同生活住居を提供しています。',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({

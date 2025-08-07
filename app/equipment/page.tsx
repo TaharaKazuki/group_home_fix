@@ -1,7 +1,30 @@
+import type { Metadata } from 'next';
+
 import EquipmentSection from '@/components/sections/Equipment';
 import { FeeItem } from '@/components/ui/feeItem';
 import { FEE_ITEMS } from '@/constant';
 import { formatYen } from '@/lib/format';
+
+export const metadata: Metadata = {
+  title: '設備・料金',
+  description:
+    'IXIA Group Homeの充実した設備と詳細な料金体系をご紹介。快適で安全な居住環境と透明性の高い料金設定で、安心してご利用いただけます。家賃補助制度も活用できます。',
+  keywords: [
+    '設備',
+    '料金',
+    'IXIA',
+    'グループホーム',
+    '家賃補助',
+    '福祉サービス',
+    '居住費',
+  ],
+  openGraph: {
+    title: '設備・料金 | IXIA Group Home',
+    description:
+      'IXIA Group Homeの充実した設備と詳細な料金体系をご紹介します。',
+    url: '/equipment',
+  },
+};
 
 const EquipmentPage = () => {
   return (

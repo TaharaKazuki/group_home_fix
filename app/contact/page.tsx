@@ -1,4 +1,26 @@
+import type { Metadata } from 'next';
+
 import ContactForm from '@/components/sections/ContactForm';
+
+export const metadata: Metadata = {
+  title: 'お問い合わせ',
+  description:
+    'IXIA Group Homeへのご質問やご相談、施設見学のお申し込みはこちらから。スタッフが丁寧にご対応いたします。お気軽にお問い合わせください。',
+  keywords: [
+    'お問い合わせ',
+    'IXIA',
+    '相談',
+    '見学',
+    'グループホーム',
+    '福祉サービス',
+  ],
+  openGraph: {
+    title: 'お問い合わせ | IXIA Group Home',
+    description:
+      'IXIA Group Homeへのご質問やご相談、施設見学のお申し込みはこちらから。',
+    url: '/contact',
+  },
+};
 
 export default function Contact() {
   return (

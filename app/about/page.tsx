@@ -1,8 +1,28 @@
-'use client';
-
+import type { Metadata } from 'next';
 import Image from 'next/image';
 
 import { ABOUT_SECTION_DESC } from '@/constant';
+
+export const metadata: Metadata = {
+  title: '私たちについて',
+  description:
+    'IXIA Group Homeの施設概要、理念、所在地・アクセス情報をご紹介。2020年4月設立、定員20名のアットホームな環境で、利用者様一人ひとりに寄り添ったサポートを提供しています。',
+  keywords: [
+    'IXIA',
+    'アバウト',
+    '施設概要',
+    'グループホーム',
+    '草加市',
+    'アクセス',
+    '定員20名',
+  ],
+  openGraph: {
+    title: '私たちについて | IXIA Group Home',
+    description:
+      'IXIA Group Homeの施設概要、理念、アクセス情報をご紹介します。',
+    url: '/about',
+  },
+};
 
 export default function AboutPage() {
   return (
