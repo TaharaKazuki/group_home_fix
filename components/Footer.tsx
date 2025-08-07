@@ -18,7 +18,6 @@ const Footer = () => {
         />
         {/* address */}
         <div className="mt-5 flex flex-col items-center text-xs">
-          <p>〒123-1234 埼玉県草加市〇〇〇〇〇〇-1234567</p>
           <p>Tel. 090-0000-0000</p>
         </div>
         {/* social */}

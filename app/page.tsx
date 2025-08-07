@@ -5,7 +5,7 @@ import HomePageContent from './HomePageContent';
 export const metadata: Metadata = {
   title: 'IXIA Group Home - 安心・安全な共同生活住居',
   description:
-    'IXIA Group Homeは埼玉県草加市にある障がい者グループホームです。利用者様一人ひとりの個性を大切にし、24時間サポート体制で安心・安全な共同生活をサポートいたします。',
+    'IXIA Group Homeは埼玉県にある障がい者グループホームです。利用者様一人ひとりの個性を大切にし、24時間サポート体制で安心・安全な共同生活をサポートいたします。',
   keywords: [
     'IXIA',
     'グループホーム',
@@ -17,8 +17,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'IXIA Group Home - 安心・安全な共同生活住居',
-    description:
-      'IXIA Group Homeは埼玉県草加市にある障がい者グループホームです。',
+    description: 'IXIA Group Homeは埼玉県にある障がい者グループホームです。',
     url: '/',
     images: [
       {

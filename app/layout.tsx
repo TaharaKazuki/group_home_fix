@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: '%s | IXIA Group Home',
   },
   description:
-    '埼玉県草加市にあるグループホーム「IXIA」では、障がいをお持ちの方が安心して暮らせる共同生活住居を提供しています。24時間サポート体制で、一人ひとりの個性を大切にしたケアを行っております。',
+    '埼玉県にあるグループホーム「IXIA」では、障がいをお持ちの方が安心して暮らせる共同生活住居を提供しています。24時間サポート体制で、一人ひとりの個性を大切にしたケアを行っております。',
   keywords: [
     'グループホーム',
     'IXIA',
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
     url: 'https://ixia-group-home.com',
     title: 'IXIA Group Home - 安心・安全な共同生活住居',
     description:
-      '埼玉県草加市にあるグループホーム「IXIA」では、障がいをお持ちの方が安心して暮らせる共同生活住居を提供しています。',
+      '埼玉県にあるグループホーム「IXIA」では、障がいをお持ちの方が安心して暮らせる共同生活住居を提供しています。',
     siteName: 'IXIA Group Home',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'IXIA Group Home - 安心・安全な共同生活住居',
     description:
-      '埼玉県草加市にあるグループホーム「IXIA」では、障がいをお持ちの方が安心して暮らせる共同生活住居を提供しています。',
+      '埼玉県にあるグループホーム「IXIA」では、障がいをお持ちの方が安心して暮らせる共同生活住居を提供しています。',
   },
   robots: {
     index: true,
