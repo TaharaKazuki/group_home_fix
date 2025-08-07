@@ -23,23 +23,23 @@ export const LINKS = [
 export const CAROUSEL_IMAGES = [
   {
     id: 0,
-    imageSrc: '/assets/hero/hero_background_1.png',
+    imageSrc: '/assets/carousel/image1.png',
   },
   {
     id: 1,
-    imageSrc: '/assets/hero/hero_background_2.png',
+    imageSrc: '/assets/carousel/image2.png',
   },
   {
     id: 2,
-    imageSrc: '/assets/hero/hero_background_3.png',
+    imageSrc: '/assets/carousel/image3.png',
   },
   {
     id: 3,
-    imageSrc: '/assets/hero/hero_background_2.png',
+    imageSrc: '/assets/carousel/image4.png',
   },
   {
     id: 4,
-    imageSrc: '/assets/hero/hero_background_3.png',
+    imageSrc: '/assets/carousel/image5.png',
   },
 ];
 
