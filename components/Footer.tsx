@@ -26,9 +26,9 @@ const Footer = () => {
           <li>
             <FaFacebook />
           </li>
-          <li>
+          <Link href="https://www.instagram.com/ikisia_group_home/">
             <FaInstagram />
-          </li>
+          </Link>
         </ul>
         {/* links */}
         <ul className="flex flex-col gap-3 py-12 text-center lg:flex-row lg:gap-9 lg:py-16">
